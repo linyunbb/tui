@@ -1,0 +1,2121 @@
+//Microsoft Developer Studio generated resource script.
+//
+#include "resource.h"
+
+#define APSTUDIO_READONLY_SYMBOLS
+/////////////////////////////////////////////////////////////////////////////
+//
+// Generated from the TEXTINCLUDE 2 resource.
+//
+#include "afxres.h"
+
+/////////////////////////////////////////////////////////////////////////////
+#undef APSTUDIO_READONLY_SYMBOLS
+
+/////////////////////////////////////////////////////////////////////////////
+// Chinese (P.R.C.) resources
+
+#if !defined(AFX_RESOURCE_DLL) || defined(AFX_TARG_CHS)
+#ifdef _WIN32
+LANGUAGE LANG_CHINESE, SUBLANG_CHINESE_SIMPLIFIED
+#pragma code_page(936)
+#endif //_WIN32
+
+#ifdef APSTUDIO_INVOKED
+/////////////////////////////////////////////////////////////////////////////
+//
+// TEXTINCLUDE
+//
+
+1 TEXTINCLUDE DISCARDABLE 
+BEGIN
+    "resource.h\0"
+END
+
+2 TEXTINCLUDE DISCARDABLE 
+BEGIN
+    "#include ""afxres.h""\r\n"
+    "\0"
+END
+
+3 TEXTINCLUDE DISCARDABLE 
+BEGIN
+    "#define _AFX_NO_SPLITTER_RESOURCES\r\n"
+    "#define _AFX_NO_OLE_RESOURCES\r\n"
+    "#define _AFX_NO_TRACKER_RESOURCES\r\n"
+    "#define _AFX_NO_PROPERTY_RESOURCES\r\n"
+    "\r\n"
+    "#if !defined(AFX_RESOURCE_DLL) || defined(AFX_TARG_CHS)\r\n"
+    "#ifdef _WIN32\r\n"
+    "LANGUAGE 4, 2\r\n"
+    "#pragma code_page(936)\r\n"
+    "#endif //_WIN32\r\n"
+    "#include ""res\\TUI.rc2""  // non-Microsoft Visual C++ edited resources\r\n"
+    "#include ""l.chs\\afxres.rc""          // Standard components\r\n"
+    "#endif\r\n"
+    "\0"
+END
+
+#endif    // APSTUDIO_INVOKED
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Icon
+//
+
+// Icon with lowest ID value placed first to ensure application icon
+// remains consistent on all systems.
+IDR_MAINFRAME           ICON    DISCARDABLE     "res\\tui.ico"
+IDI_TABLE_1             ICON    DISCARDABLE     "res\\file-doc.ico"
+IDI_PATIENT             ICON    DISCARDABLE     "res\\patient.ico"
+IDI_PATIENT_SEL         ICON    DISCARDABLE     "res\\patient_sel.ico"
+IDI_TABLE_LOCK          ICON    DISCARDABLE     "res\\lock.ico"
+IDI_PATIENT_FINISHED    ICON    DISCARDABLE     "res\\finished.ico"
+IDI_PATIENT_FINISHED_SEL ICON    DISCARDABLE     "res\\finished_sel.ico"
+IDI_TABLE_FINISHED      ICON    DISCARDABLE     "res\\file-doc-finished.ico"
+IDI_LDY_PATIENT         ICON    DISCARDABLE     "res\\ldy_patient.ico"
+IDI_LDY_PATIENT_SEL     ICON    DISCARDABLE     "res\\ldy_patient_sel.ico"
+IDI_LDY_PATIENT_FINISHED_SEL ICON    DISCARDABLE     "res\\ldy_patient_finished_sel.ico"
+IDI_LDY_PATIENT_FINISHED ICON    DISCARDABLE     "res\\ldy_patient_finished.ico"
+IDI_ICON1               ICON    DISCARDABLE     "res\\performance.ico"
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Dialog
+//
+
+IDD_ABOUTBOX DIALOG DISCARDABLE  0, 0, 296, 55
+STYLE DS_MODALFRAME | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "关于"
+FONT 9, "宋体"
+BEGIN
+    ICON            IDR_MAINFRAME,IDC_STATIC,11,17,21,21
+    LTEXT           "重大专项""结核病发病模式研究""研究对象信息 程序",
+                    IDC_STATIC,40,10,191,8,SS_NOPREFIX
+    LTEXT           "版权所有 (C) 2010",IDC_STATIC,40,25,119,8
+    DEFPUSHBUTTON   "确定",IDOK,239,7,50,14,WS_GROUP
+END
+
+IDD_TUI_DIALOG DIALOGEX 0, 0, 252, 165
+STYLE DS_MODALFRAME | DS_3DLOOK | WS_MINIMIZEBOX | WS_POPUP | WS_VISIBLE | 
+    WS_CAPTION | WS_SYSMENU
+EXSTYLE WS_EX_APPWINDOW
+CAPTION "重大专项""结核病发病模式研究""研究对象信息 主程序"
+FONT 12, "宋体"
+BEGIN
+    CONTROL         169,IDC_STATIC_BK,"Static",SS_BITMAP | SS_CENTERIMAGE | 
+                    WS_TABSTOP,0,0,252,165
+    PUSHBUTTON      "退出",IDCANCEL,64,106,129,17
+    PUSHBUTTON      "健康对照信息",IDC_HEALTH_INFO_BUTTON,64,65,129,17
+    PUSHBUTTON      "肺结核患者信息与费用支出信息",IDC_PATIENT_INPUT,64,30,
+                    129,17
+END
+
+IDD_PATIENT_INPUT_DIALOG DIALOGEX 0, 0, 538, 356
+STYLE DS_MODALFRAME | WS_MINIMIZEBOX | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "肺结核患者信息及MDR-TB患者费用支出记录"
+FONT 10, "宋体"
+BEGIN
+    COMBOBOX        IDC_CITY_SEL_COMBO,52,19,92,118,CBS_DROPDOWNLIST | 
+                    WS_VSCROLL | WS_TABSTOP
+    COMBOBOX        IDC_TOWN_SEL_COMBO,182,19,93,117,CBS_DROPDOWNLIST | 
+                    WS_VSCROLL | WS_TABSTOP
+    EDITTEXT        IDC_FILTER,315,20,73,17,ES_MULTILINE | ES_AUTOHSCROLL,
+                    WS_EX_DLGMODALFRAME
+    CONTROL         "List3",IDC_PATIENT_LIST,"SysListView32",
+                    LVS_SHOWSELALWAYS | LVS_AUTOARRANGE | WS_BORDER | 
+                    WS_TABSTOP,21,50,492,91,WS_EX_CLIENTEDGE | 
+                    WS_EX_STATICEDGE
+    CONTROL         "List2",IDC_TABLE_LIST,"SysListView32",LVS_SHOWSELALWAYS | 
+                    WS_BORDER | WS_TABSTOP,22,218,489,110,WS_EX_CLIENTEDGE | 
+                    WS_EX_STATICEDGE
+    PUSHBUTTON      "退出",IDCANCEL,446,17,77,18
+    LTEXT           "县区：",IDC_STATIC,157,21,23,8
+    LTEXT           "地市：",IDC_STATIC,27,21,23,8
+    GROUPBOX        "请选择地市与县区：",IDC_STATIC_CT,12,7,283,31
+    PUSHBUTTON      "新建",IDC_NEW_PATIENT,21,147,59,17
+    GROUPBOX        "患者登记列表：",IDC_STATIC_PATIENT_LIST,12,39,511,131
+    PUSHBUTTON      "删除",IDC_DELETE_PATIENT,111,147,59,17
+    CONTROL         "Tab1",IDC_SUB_SECTION_TAB,"SysTabControl32",0x0,17,199,
+                    497,137
+    CONTROL         "Tab1",IDC_SECTION_TAB,"SysTabControl32",0x0,7,184,517,
+                    157
+    PUSHBUTTON      "导出信息",IDC_EXPORT_DATA,369,147,142,17
+    LTEXT           "输入ID或姓名查找:",IDC_STATIC_FILTER,300,11,65,8
+    CONTROL         "Progress1",IDC_EXPORT_PROGRESS,"msctls_progress32",NOT 
+                    WS_VISIBLE | WS_BORDER,427,171,94,10
+    LTEXT           "",IDC_STATIC_EXPORT,356,171,67,8
+    PUSHBUTTON      "查看统计",IDC_CHECK_STAT,201,147,59,17
+    PUSHBUTTON      "导入信息",IDC_IMPORT_DATA,291,147,59,17
+END
+
+IDD_TABLE_1101 DIALOG DISCARDABLE  0, 0, 319, 368
+STYLE DS_MODALFRAME | WS_MINIMIZEBOX | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "可疑者信息卡"
+FONT 10, "宋体"
+BEGIN
+    EDITTEXT        IDC_REGISTER_ID,125,35,147,14,ES_MULTILINE | 
+                    ES_AUTOHSCROLL
+    EDITTEXT        IDC_NAME,125,52,64,14,ES_MULTILINE | ES_AUTOHSCROLL
+    COMBOBOX        IDC_SEX_COMBO,125,69,64,71,CBS_DROPDOWNLIST | WS_VSCROLL | 
+                    WS_TABSTOP
+    EDITTEXT        IDC_AGE,125,85,40,14,ES_MULTILINE | ES_AUTOHSCROLL
+    EDITTEXT        IDC_CONTACT_INFO,125,102,103,14,ES_MULTILINE | 
+                    ES_AUTOHSCROLL
+    EDITTEXT        IDC_ADDRESS,125,119,175,14,ES_MULTILINE | ES_AUTOHSCROLL
+    EDITTEXT        IDC_BORN_ADDRESS,125,136,174,14,ES_MULTILINE | 
+                    ES_AUTOHSCROLL
+    CONTROL         "DateTimePicker1",IDC_DIANOSTIC_DATE,"SysDateTimePick32",
+                    DTS_RIGHTALIGN | DTS_SHOWNONE | WS_TABSTOP,125,153,72,15
+    CONTROL         "DateTimePicker1",IDC_REGISTER_DATE,"SysDateTimePick32",
+                    DTS_RIGHTALIGN | DTS_SHOWNONE | WS_TABSTOP,125,171,72,15
+    CONTROL         "DateTimePicker1",IDC_PHLEGM_DATE,"SysDateTimePick32",
+                    DTS_RIGHTALIGN | DTS_SHOWNONE | WS_TABSTOP,125,189,72,15
+    CONTROL         "DateTimePicker1",IDC_CURL_START_DATE,"SysDateTimePick32",
+                    DTS_RIGHTALIGN | DTS_SHOWNONE | WS_TABSTOP,125,207,72,15
+    COMBOBOX        IDC_SCREEN_OBJECT,125,225,74,86,CBS_DROPDOWNLIST | 
+                    WS_VSCROLL | WS_TABSTOP
+    COMBOBOX        IDC_CURE_CATEGORY,125,242,74,76,CBS_DROPDOWNLIST | 
+                    WS_VSCROLL | WS_TABSTOP
+    COMBOBOX        IDC_REGISTER_CATEGORY,125,260,74,123,CBS_DROPDOWNLIST | 
+                    WS_VSCROLL | WS_TABSTOP
+    COMBOBOX        IDC_MEDCINE_HISTORY_CATEGORY,125,277,128,106,
+                    CBS_DROPDOWNLIST | WS_VSCROLL | WS_TABSTOP
+    CONTROL         "DateTimePicker1",IDC_SAMPLE_DATE,"SysDateTimePick32",
+                    DTS_RIGHTALIGN | DTS_SHOWNONE | WS_TABSTOP,125,291,72,15
+    CONTROL         "DateTimePicker1",IDC_SAMPLE_REPORT_DATE,
+                    "SysDateTimePick32",DTS_RIGHTALIGN | DTS_SHOWNONE | 
+                    WS_TABSTOP,125,309,72,15
+    COMBOBOX        IDC_SAMPLE_RESULT,124,329,74,123,CBS_DROPDOWNLIST | 
+                    WS_VSCROLL | WS_TABSTOP
+    PUSHBUTTON      "确定",IDC_CONFIRM,45,347,50,14
+    PUSHBUTTON      "取消",IDCANCEL,235,347,50,14
+    LTEXT           "重大专项ID编号：",IDC_STATIC,59,23,61,8
+    LTEXT           "结核病患者登记号：",IDC_STATIC,52,39,68,8
+    LTEXT           "姓名：",IDC_STATIC,97,55,23,8
+    LTEXT           "性别：",IDC_STATIC,97,72,23,8
+    LTEXT           "年龄：",IDC_STATIC,97,88,23,8
+    LTEXT           "联系方式：",IDC_STATIC,82,105,38,8
+    LTEXT           "现住址：",IDC_STATIC,89,121,31,8
+    LTEXT           "留痰日期：",IDC_STATIC,82,190,38,8
+    LTEXT           "筛查对象：",IDC_STATIC,82,228,38,8
+    LTEXT           "治疗分类：",IDC_STATIC,82,244,38,8
+    LTEXT           "登记分类：",IDC_STATIC,82,263,38,8
+    LTEXT           "根据用药史分类：",IDC_STATIC,59,281,60,8
+    LTEXT           "户籍所在地（省、地市、县）：",IDC_STATIC,15,139,105,8
+    LTEXT           "就诊日期：",IDC_STATIC,82,158,38,8
+    LTEXT           "登记日期：",IDC_STATIC,82,174,38,8
+    LTEXT           "开始一线药治疗日期：",IDC_STATIC,45,209,75,8
+    LTEXT           "编号",IDC_ID,125,21,177,8
+    LTEXT           "涂片日期:",IDC_STATIC,84,296,35,8
+    LTEXT           "涂片结果报告日期:",IDC_STATIC,55,312,64,8
+    LTEXT           "涂片结果:",IDC_STATIC,84,330,35,8
+END
+
+IDD_TABLE_1102 DIALOG DISCARDABLE  0, 0, 231, 117
+STYLE DS_MODALFRAME | WS_MINIMIZEBOX | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "痰培养结果"
+FONT 10, "宋体"
+BEGIN
+    CONTROL         "DateTimePicker1",IDC_CULTIVATE_DATE,"SysDateTimePick32",
+                    DTS_RIGHTALIGN | DTS_SHOWNONE | WS_TABSTOP,102,25,72,15
+    CONTROL         "DateTimePicker1",IDC_REPORT_DATE,"SysDateTimePick32",
+                    DTS_RIGHTALIGN | DTS_SHOWNONE | WS_TABSTOP,102,43,72,15
+    COMBOBOX        IDC_CULTIVATE_RESULT,102,63,72,123,CBS_DROPDOWNLIST | 
+                    WS_VSCROLL | WS_TABSTOP
+    PUSHBUTTON      "确定",IDC_CONFIRM,7,96,50,14
+    PUSHBUTTON      "取消",IDCANCEL,174,96,50,14
+    LTEXT           "开始培养日期:",IDC_STATIC,43,29,50,8
+    LTEXT           "结果报告日期:",IDC_STATIC,43,46,50,8
+    LTEXT           "培养结果:",IDC_STATIC,58,64,35,8
+END
+
+IDD_TABLE_1201 DIALOG DISCARDABLE  0, 0, 231, 115
+STYLE DS_MODALFRAME | WS_MINIMIZEBOX | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "菌型鉴定结果"
+FONT 10, "宋体"
+BEGIN
+    CONTROL         "DateTimePicker1",IDC_EXAMINE_START_DATE,
+                    "SysDateTimePick32",DTS_RIGHTALIGN | DTS_SHOWNONE | 
+                    WS_TABSTOP,125,25,72,15
+    CONTROL         "DateTimePicker1",IDC_REPORT_DATE,"SysDateTimePick32",
+                    DTS_RIGHTALIGN | DTS_SHOWNONE | WS_TABSTOP,125,43,72,15
+    COMBOBOX        IDC_EXAMINE_RESULT,125,63,72,123,CBS_DROPDOWNLIST | 
+                    WS_VSCROLL | WS_TABSTOP
+    PUSHBUTTON      "确定",IDC_CONFIRM,7,94,50,14
+    PUSHBUTTON      "取消",IDCANCEL,174,94,50,14
+    LTEXT           "菌型鉴定开始日期:",IDC_STATIC,50,29,64,8
+    LTEXT           "结果报告日期:",IDC_STATIC,64,46,50,8
+    LTEXT           "结核分枝杆菌复合群鉴定结果:",IDC_STATIC,21,64,102,8
+END
+
+IDD_TABLE_1202 DIALOG DISCARDABLE  0, 0, 231, 213
+STYLE DS_MODALFRAME | WS_MINIMIZEBOX | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "传统药敏试验结果"
+FONT 10, "宋体"
+BEGIN
+    CONTROL         "DateTimePicker1",IDC_START_DATE,"SysDateTimePick32",
+                    DTS_RIGHTALIGN | DTS_SHOWNONE | WS_TABSTOP,107,25,72,15
+    CONTROL         "DateTimePicker1",IDC_REPORT_DATE,"SysDateTimePick32",
+                    DTS_RIGHTALIGN | DTS_SHOWNONE | WS_TABSTOP,107,43,72,15
+    COMBOBOX        IDC_YYJ_RESULT,107,63,72,123,CBS_DROPDOWNLIST | 
+                    WS_VSCROLL | WS_TABSTOP
+    COMBOBOX        IDC_LFP_RESULT,107,83,72,123,CBS_DROPDOWNLIST | 
+                    WS_VSCROLL | WS_TABSTOP
+    COMBOBOX        IDC_YADC_RESULT,107,104,72,123,CBS_DROPDOWNLIST | 
+                    WS_VSCROLL | WS_TABSTOP
+    COMBOBOX        IDC_LMS_RESULT,107,126,72,123,CBS_DROPDOWNLIST | 
+                    WS_VSCROLL | WS_TABSTOP
+    COMBOBOX        IDC_YFSX_RESULT,107,146,72,123,CBS_DROPDOWNLIST | 
+                    WS_VSCROLL | WS_TABSTOP
+    COMBOBOX        IDC_KNMS_RESULT,107,168,72,123,CBS_DROPDOWNLIST | 
+                    WS_VSCROLL | WS_TABSTOP
+    PUSHBUTTON      "确定",IDC_CONFIRM,7,192,50,14
+    PUSHBUTTON      "取消",IDCANCEL,174,192,50,14
+    LTEXT           "开始药敏日期:",IDC_STATIC,50,29,50,8
+    LTEXT           "结果报告日期:",IDC_STATIC,50,46,50,8
+    LTEXT           "异烟肼:",IDC_STATIC,73,66,27,8
+    LTEXT           "利福平:",IDC_STATIC,73,86,27,8
+    LTEXT           "乙胺丁醇:",IDC_STATIC,65,107,35,8
+    LTEXT           "链霉素:",IDC_STATIC,73,129,27,8
+    LTEXT           "卡那霉素:",IDC_STATIC,65,169,35,8
+    LTEXT           "氧氟沙星:",IDC_STATIC,65,149,35,8
+END
+
+IDD_TABLE_1203 DIALOG DISCARDABLE  0, 0, 231, 128
+STYLE DS_MODALFRAME | WS_MINIMIZEBOX | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "HAIN结果"
+FONT 10, "宋体"
+BEGIN
+    CONTROL         "DateTimePicker1",IDC_START_DATE,"SysDateTimePick32",
+                    DTS_RIGHTALIGN | DTS_SHOWNONE | WS_TABSTOP,107,25,72,15
+    CONTROL         "DateTimePicker1",IDC_REPORT_DATE,"SysDateTimePick32",
+                    DTS_RIGHTALIGN | DTS_SHOWNONE | WS_TABSTOP,107,43,72,15
+    COMBOBOX        IDC_YYJ_RESULT,107,63,72,123,CBS_DROPDOWNLIST | 
+                    WS_VSCROLL | WS_TABSTOP
+    COMBOBOX        IDC_LFP_RESULT,107,83,72,123,CBS_DROPDOWNLIST | 
+                    WS_VSCROLL | WS_TABSTOP
+    PUSHBUTTON      "确定",IDC_CONFIRM,7,107,50,14
+    PUSHBUTTON      "取消",IDCANCEL,174,107,50,14
+    LTEXT           "开始日期:",IDC_STATIC,65,29,35,8
+    LTEXT           "结果报告日期:",IDC_STATIC,50,46,50,8
+    LTEXT           "异烟肼:",IDC_STATIC,73,66,27,8
+    LTEXT           "利福平:",IDC_STATIC,73,86,27,8
+END
+
+IDD_TABLE_1204 DIALOG DISCARDABLE  0, 0, 231, 128
+STYLE DS_MODALFRAME | WS_MINIMIZEBOX | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "博奥生物芯片结果"
+FONT 10, "宋体"
+BEGIN
+    CONTROL         "DateTimePicker1",IDC_START_DATE,"SysDateTimePick32",
+                    DTS_RIGHTALIGN | DTS_SHOWNONE | WS_TABSTOP,106,25,72,15
+    CONTROL         "DateTimePicker1",IDC_REPORT_DATE,"SysDateTimePick32",
+                    DTS_RIGHTALIGN | DTS_SHOWNONE | WS_TABSTOP,106,43,72,15
+    COMBOBOX        IDC_YYJ_RESULT,106,63,72,123,CBS_DROPDOWNLIST | 
+                    WS_VSCROLL | WS_TABSTOP
+    COMBOBOX        IDC_LFP_RESULT,106,83,72,123,CBS_DROPDOWNLIST | 
+                    WS_VSCROLL | WS_TABSTOP
+    PUSHBUTTON      "确定",IDC_CONFIRM,7,107,50,14
+    PUSHBUTTON      "取消",IDCANCEL,174,107,50,14
+    LTEXT           "开始日期:",IDC_STATIC,64,29,35,8
+    LTEXT           "结果报告日期:",IDC_STATIC,49,46,50,8
+    LTEXT           "异烟肼:",IDC_STATIC,72,66,27,8
+    LTEXT           "利福平:",IDC_STATIC,72,86,27,8
+END
+
+IDD_TABLE_1205 DIALOG DISCARDABLE  0, 0, 231, 168
+STYLE DS_MODALFRAME | WS_MINIMIZEBOX | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "BACTECH960快培结果"
+FONT 10, "宋体"
+BEGIN
+    CONTROL         "DateTimePicker1",IDC_START_DATE,"SysDateTimePick32",
+                    DTS_RIGHTALIGN | DTS_SHOWNONE | WS_TABSTOP,106,25,72,15
+    CONTROL         "DateTimePicker1",IDC_REPORT_DATE,"SysDateTimePick32",
+                    DTS_RIGHTALIGN | DTS_SHOWNONE | WS_TABSTOP,106,43,72,15
+    COMBOBOX        IDC_YYJ_RESULT,106,63,72,123,CBS_DROPDOWNLIST | 
+                    WS_VSCROLL | WS_TABSTOP
+    COMBOBOX        IDC_LFP_RESULT,106,83,72,123,CBS_DROPDOWNLIST | 
+                    WS_VSCROLL | WS_TABSTOP
+    COMBOBOX        IDC_YADC_RESULT,107,103,72,123,CBS_DROPDOWNLIST | 
+                    WS_VSCROLL | WS_TABSTOP
+    COMBOBOX        IDC_LMS_RESULT,107,125,72,123,CBS_DROPDOWNLIST | 
+                    WS_VSCROLL | WS_TABSTOP
+    PUSHBUTTON      "确定",IDC_CONFIRM,7,147,50,14
+    PUSHBUTTON      "取消",IDCANCEL,174,147,50,14
+    LTEXT           "开始日期:",IDC_STATIC,64,29,35,8
+    LTEXT           "结果报告日期:",IDC_STATIC,49,46,50,8
+    LTEXT           "异烟肼:",IDC_STATIC,72,66,27,8
+    LTEXT           "利福平:",IDC_STATIC,72,86,27,8
+    LTEXT           "乙胺丁醇:",IDC_STATIC,65,106,35,8
+    LTEXT           "链霉素:",IDC_STATIC,73,128,27,8
+END
+
+IDD_TABLE_1206 DIALOG DISCARDABLE  0, 0, 241, 176
+STYLE DS_MODALFRAME | WS_MINIMIZEBOX | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "患者纳入"
+FONT 10, "宋体"
+BEGIN
+    COMBOBOX        IDC_DIAGNOSTIC_RESULT,119,21,72,123,CBS_DROPDOWNLIST | 
+                    WS_VSCROLL | WS_TABSTOP
+    CONTROL         "DateTimePicker1",IDC_REPORT_DATE,"SysDateTimePick32",
+                    DTS_RIGHTALIGN | DTS_SHOWNONE | WS_TABSTOP,119,41,72,15
+    EDITTEXT        IDC_NDY_REGISTER_NO,119,61,72,13,ES_MULTILINE | 
+                    ES_AUTOHSCROLL
+    COMBOBOX        IDC_IS_SUITABLE,119,79,72,123,CBS_DROPDOWNLIST | 
+                    WS_VSCROLL | WS_TABSTOP
+    COMBOBOX        IDC_WILLING_TO_BE_SEARCHED,119,98,72,123,
+                    CBS_DROPDOWNLIST | WS_VSCROLL | WS_TABSTOP
+    COMBOBOX        IDC_PATIENT_SEARCH_INFO,119,116,99,123,CBS_DROPDOWNLIST | 
+                    WS_VSCROLL | WS_TABSTOP
+    CONTROL         "DateTimePicker1",IDC_PATIENT_SEARCH_INFO_DATE,
+                    "SysDateTimePick32",DTS_RIGHTALIGN | DTS_SHOWNONE | 
+                    WS_TABSTOP,118,136,72,15
+    PUSHBUTTON      "确定",IDC_CONFIRM,7,155,50,14
+    PUSHBUTTON      "取消",IDCANCEL,184,155,50,14
+    LTEXT           "诊断结果:",IDC_STATIC,77,23,35,8
+    LTEXT           "耐多药登记日期:",IDC_STATIC,55,42,57,8
+    LTEXT           "耐多药肺结核患者登记号:",IDC_STATIC,25,61,87,8
+    LTEXT           "是否符合研究要求:",IDC_STATIC,48,80,64,8
+    LTEXT           "是否同意纳入研究:",IDC_STATIC,48,99,64,8
+    LTEXT           "患者纳入情况:",IDC_STATIC,62,118,50,8
+    LTEXT           "患者纳入时间:",IDC_STATIC,62,139,50,8
+END
+
+IDD_TABLE_1301 DIALOG DISCARDABLE  0, 0, 253, 257
+STYLE DS_MODALFRAME | WS_MINIMIZEBOX | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "问卷调查及标本保存"
+FONT 10, "宋体"
+BEGIN
+    COMBOBOX        IDC_IS_ACKED,154,21,72,123,CBS_DROPDOWNLIST | WS_VSCROLL | 
+                    WS_TABSTOP
+    COMBOBOX        IDC_IS_QUESTIONAIR_FINISHED,154,39,72,123,
+                    CBS_DROPDOWNLIST | WS_VSCROLL | WS_TABSTOP
+    CONTROL         "DateTimePicker1",IDC_FINISHED_DATE,"SysDateTimePick32",
+                    DTS_RIGHTALIGN | DTS_SHOWNONE | WS_TABSTOP,154,58,72,15
+    COMBOBOX        IDC_IS_QUESTIONAIR_COMPLETE,154,79,72,123,
+                    CBS_DROPDOWNLIST | WS_VSCROLL | WS_TABSTOP
+    COMBOBOX        IDC_IS_BLOOD_TAKEN,154,98,72,123,CBS_DROPDOWNLIST | 
+                    WS_VSCROLL | WS_TABSTOP
+    CONTROL         "DateTimePicker1",IDC_BLOOD_TAKEN_DATE,"SysDateTimePick32",
+                    DTS_RIGHTALIGN | DTS_SHOWNONE | WS_TABSTOP,154,116,72,15
+    COMBOBOX        IDC_BLOOD_TAKEN_NO,154,136,72,123,CBS_DROPDOWNLIST | 
+                    WS_VSCROLL | WS_TABSTOP
+    EDITTEXT        IDC_BLOOD_ML,154,155,72,13,ES_MULTILINE | ES_AUTOHSCROLL
+    COMBOBOX        IDC_IS_RESERVED_20,154,174,72,123,CBS_DROPDOWNLIST | 
+                    WS_VSCROLL | WS_TABSTOP
+    COMBOBOX        IDC_INSTITUTION_LEVEL,154,192,72,123,CBS_DROPDOWNLIST | 
+                    WS_VSCROLL | WS_TABSTOP
+    COMBOBOX        IDC_IS_RESERVED_4,154,210,72,123,CBS_DROPDOWNLIST | 
+                    WS_VSCROLL | WS_TABSTOP
+    PUSHBUTTON      "取消",IDCANCEL,196,236,50,14
+    LTEXT           "是否完成问卷调查知情同意书:",IDC_STATIC,46,23,102,8
+    LTEXT           "是否完成问卷调查:",IDC_STATIC,84,42,64,8
+    LTEXT           "完成问卷调查日期:",IDC_STATIC,84,61,64,8
+    LTEXT           "调查问卷是否完整:",IDC_STATIC,84,80,64,8
+    LTEXT           "是否已采血:",IDC_STATIC,106,99,42,8
+    LTEXT           "血标本采集日期:",IDC_STATIC,91,118,57,8
+    LTEXT           "已采血管数:",IDC_STATIC,106,137,42,8
+    LTEXT           "每管采血量（ml）:",IDC_STATIC,83,156,65,8
+    LTEXT           "目前采血管是否在-20℃低温冰箱保存:",IDC_STATIC,20,175,
+                    128,8
+    LTEXT           "目前药敏试验空白管保存在哪一级机构:",IDC_STATIC,17,194,
+                    131,8
+    LTEXT           "目前药敏试验空白管是否在4℃下保存:",IDC_STATIC,20,213,
+                    128,8
+    PUSHBUTTON      "确定",IDC_CONFIRM,7,236,50,14
+END
+
+IDD_TABLE_1302 DIALOG DISCARDABLE  0, 0, 243, 134
+STYLE DS_MODALFRAME | WS_MINIMIZEBOX | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "血标本运输"
+FONT 10, "宋体"
+BEGIN
+    COMBOBOX        IDC_IS_TO_PROVINCE,130,20,72,123,CBS_DROPDOWNLIST | 
+                    WS_VSCROLL | WS_TABSTOP
+    CONTROL         "DateTimePicker1",IDC_TO_PROVINCE_DATE,"SysDateTimePick32",
+                    DTS_RIGHTALIGN | DTS_SHOWNONE | WS_TABSTOP,130,40,72,15
+    COMBOBOX        IDC_IS_TO_NATIONAL,130,63,72,123,CBS_DROPDOWNLIST | 
+                    WS_VSCROLL | WS_TABSTOP
+    CONTROL         "DateTimePicker1",IDC_TO_NATIONAL_DATE,"SysDateTimePick32",
+                    DTS_RIGHTALIGN | DTS_SHOWNONE | WS_TABSTOP,130,83,72,15
+    PUSHBUTTON      "取消",IDCANCEL,186,113,50,14
+    LTEXT           "血标本是否运送到省级:",IDC_STATIC,46,23,79,8
+    LTEXT           "血标本是否运往国家级:",IDC_STATIC,46,65,79,8
+    LTEXT           "血标本运送到省级的日期:",IDC_STATIC,38,44,87,8
+    LTEXT           "血标本运往国家级的日期:",IDC_STATIC,38,86,87,8
+    PUSHBUTTON      "确定",IDC_CONFIRM,7,113,50,14
+END
+
+IDD_TABLE_1303 DIALOG DISCARDABLE  0, 0, 243, 134
+STYLE DS_MODALFRAME | WS_MINIMIZEBOX | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "菌株运输"
+FONT 10, "宋体"
+BEGIN
+    COMBOBOX        IDC_IS_TO_PROVINCE,130,20,72,123,CBS_DROPDOWNLIST | 
+                    WS_VSCROLL | WS_TABSTOP
+    CONTROL         "DateTimePicker1",IDC_TO_PROVINCE_DATE,"SysDateTimePick32",
+                    DTS_RIGHTALIGN | DTS_SHOWNONE | WS_TABSTOP,130,40,72,15
+    COMBOBOX        IDC_IS_TO_NATIONAL,130,63,72,123,CBS_DROPDOWNLIST | 
+                    WS_VSCROLL | WS_TABSTOP
+    CONTROL         "DateTimePicker1",IDC_TO_NATIONAL_DATE,"SysDateTimePick32",
+                    DTS_RIGHTALIGN | DTS_SHOWNONE | WS_TABSTOP,130,83,72,15
+    PUSHBUTTON      "取消",IDCANCEL,186,113,50,14
+    LTEXT           "菌株是否运送到省级:",IDC_STATIC,46,23,72,8
+    LTEXT           "菌株是否运往国家级:",IDC_STATIC,46,65,72,8
+    LTEXT           "菌株运送到省级的日期:",IDC_STATIC,38,44,79,8
+    LTEXT           "菌株运往国家级的日期:",IDC_STATIC,38,86,79,8
+    PUSHBUTTON      "确定",IDC_CONFIRM,7,113,50,14
+END
+
+IDD_TABLE_1401 DIALOG DISCARDABLE  0, 0, 403, 139
+STYLE DS_MODALFRAME | WS_MINIMIZEBOX | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "首次治疗情况"
+FONT 10, "宋体"
+BEGIN
+    EDITTEXT        IDC_PROJECT,102,40,273,41,ES_MULTILINE | ES_WANTRETURN | 
+                    WS_VSCROLL | WS_HSCROLL
+    CONTROL         "DateTimePicker1",IDC_FIRST_TREAT_DATE,"SysDateTimePick32",
+                    DTS_RIGHTALIGN | DTS_SHOWNONE | WS_TABSTOP,102,90,72,15
+    PUSHBUTTON      "取消",IDCANCEL,346,118,50,14
+    LTEXT           "首次治疗方案:",IDC_STATIC,44,23,50,8
+    LTEXT           "首次治疗开始日期:",IDC_STATIC,30,95,64,8
+    PUSHBUTTON      "确定",IDC_CONFIRM,7,118,50,14
+    LTEXT           "其他:",IDC_STATIC,74,42,20,8
+    COMBOBOX        IDC_PROJECT_SEL,102,20,259,140,CBS_DROPDOWNLIST | 
+                    WS_VSCROLL | WS_TABSTOP
+END
+
+IDD_TABLE_1402_1425 DIALOG DISCARDABLE  0, 0, 351, 362
+STYLE DS_MODALFRAME | WS_MINIMIZEBOX | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "治疗情况"
+FONT 10, "宋体"
+BEGIN
+    COMBOBOX        IDC_SAMPLE_RESULT,89,21,72,123,CBS_DROPDOWNLIST | 
+                    WS_VSCROLL | WS_TABSTOP
+    COMBOBOX        IDC_CULTIVATE_RESULT,89,41,72,123,CBS_DROPDOWNLIST | 
+                    WS_VSCROLL | WS_TABSTOP
+    COMBOBOX        IDC_IS_IN_HOSPITAL,89,61,72,123,CBS_DROPDOWNLIST | 
+                    WS_VSCROLL | WS_TABSTOP
+    EDITTEXT        IDC_IN_HOSPITAL_DAY,89,81,72,13,ES_MULTILINE | 
+                    ES_AUTOHSCROLL
+    EDITTEXT        IDC_WEIGHT,89,102,72,13,ES_MULTILINE | ES_AUTOHSCROLL
+    COMBOBOX        IDC_ABNORMAL_TYPE,89,122,72,123,CBS_DROPDOWNLIST | 
+                    WS_VSCROLL | WS_TABSTOP
+    COMBOBOX        IDC_ABNORMAL_LEVEL,89,141,72,123,CBS_DROPDOWNLIST | 
+                    WS_VSCROLL | WS_TABSTOP
+    CONTROL         "DateTimePicker1",IDC_ABNORMAL_DATE,"SysDateTimePick32",
+                    DTS_RIGHTALIGN | DTS_SHOWNONE | WS_TABSTOP,89,163,72,15
+    COMBOBOX        IDC_IMPACT,89,186,72,123,CBS_DROPDOWNLIST | WS_VSCROLL | 
+                    WS_TABSTOP
+    COMBOBOX        IDC_IS_PROJECT_CHANGED,89,206,72,123,CBS_DROPDOWNLIST | 
+                    WS_VSCROLL | WS_TABSTOP
+    CONTROL         "DateTimePicker1",IDC_PROJECT_CHANGED_DATE,
+                    "SysDateTimePick32",DTS_RIGHTALIGN | DTS_SHOWNONE | 
+                    WS_TABSTOP,89,226,72,15
+    EDITTEXT        IDC_CHANGED_PROJECT,78,261,259,76,ES_MULTILINE | 
+                    ES_WANTRETURN | WS_VSCROLL | WS_HSCROLL
+    COMBOBOX        IDC_Z_YESNO,283,20,46,123,CBS_DROPDOWNLIST | WS_VSCROLL | 
+                    WS_TABSTOP
+    COMBOBOX        IDC_E_YESNO,283,37,46,123,CBS_DROPDOWNLIST | WS_VSCROLL | 
+                    WS_TABSTOP
+    COMBOBOX        IDC_KM_YESNO,283,54,46,123,CBS_DROPDOWNLIST | WS_VSCROLL | 
+                    WS_TABSTOP
+    COMBOBOX        IDC_AM_YESNO,283,73,46,123,CBS_DROPDOWNLIST | WS_VSCROLL | 
+                    WS_TABSTOP
+    COMBOBOX        IDC_CM_YESNO,283,91,46,123,CBS_DROPDOWNLIST | WS_VSCROLL | 
+                    WS_TABSTOP
+    COMBOBOX        IDC_OFX_YESN,283,110,46,123,CBS_DROPDOWNLIST | 
+                    WS_VSCROLL | WS_TABSTOP
+    COMBOBOX        IDC_LFX_YESNO,283,128,46,123,CBS_DROPDOWNLIST | 
+                    WS_VSCROLL | WS_TABSTOP
+    COMBOBOX        IDC_MFX_YESNO,283,146,46,123,CBS_DROPDOWNLIST | 
+                    WS_VSCROLL | WS_TABSTOP
+    COMBOBOX        IDC_PTO_YESNO,283,164,46,123,CBS_DROPDOWNLIST | 
+                    WS_VSCROLL | WS_TABSTOP
+    COMBOBOX        IDC_CS_YESNO,283,183,46,123,CBS_DROPDOWNLIST | 
+                    WS_VSCROLL | WS_TABSTOP
+    COMBOBOX        IDC_PAS_YESNO,283,202,46,123,CBS_DROPDOWNLIST | 
+                    WS_VSCROLL | WS_TABSTOP
+    EDITTEXT        IDC_OTHER_MEDICINE,236,223,89,13,ES_MULTILINE | 
+                    ES_AUTOHSCROLL
+    PUSHBUTTON      "确定",IDC_CONFIRM,7,341,50,14
+    PUSHBUTTON      "取消",IDCANCEL,294,341,50,14
+    LTEXT           "涂片结果:",IDC_STATIC,48,23,35,8
+    LTEXT           "培养结果:",IDC_STATIC,48,43,35,8
+    LTEXT           "是否住院治疗:",IDC_STATIC,33,63,50,8
+    LTEXT           "住院天数:",IDC_STATIC,48,84,35,8
+    LTEXT           "不良反应类型:",IDC_STATIC,33,124,50,8
+    LTEXT           "不良反应程度:",IDC_STATIC,33,144,50,8
+    LTEXT           "不良反应出现日期:",IDC_STATIC,19,166,64,8
+    LTEXT           "对治疗影响:",IDC_STATIC,41,188,42,8
+    LTEXT           "是否更改方案:",IDC_STATIC,33,208,50,8
+    LTEXT           "目前更改方案的日期:",IDC_STATIC,11,228,72,8
+    LTEXT           "更改后的方案:",IDC_STATIC,24,264,50,8
+    LTEXT           "体重（千克）:",IDC_STATIC,33,104,50,8
+    LTEXT           "是否领取吡嗪酰胺(Z):",IDC_STATIC,202,21,76,8
+    LTEXT           "是否领取乙胺丁醇(E):",IDC_STATIC,202,39,76,8
+    LTEXT           "是否领取卡那霉素(Km):",IDC_STATIC,198,57,80,8
+    LTEXT           "是否领取丁胺卡那霉素(Am):",IDC_STATIC,183,75,95,8
+    LTEXT           "是否领取卷曲霉素(Cm):",IDC_STATIC,198,93,80,8
+    LTEXT           "是否领取左氧氟沙星(Lfx):",IDC_STATIC,186,130,92,8
+    LTEXT           "是否领取莫西沙星(Mfx):",IDC_STATIC,194,149,84,8
+    LTEXT           "是否领取丙硫异烟胺(Pto):",IDC_STATIC,186,168,92,8
+    LTEXT           "是否领取环丝氨酸(Cs):",IDC_STATIC,198,185,80,8
+    LTEXT           "是否领取对氨基水杨酸(PAS):",IDC_STATIC,179,203,99,8
+    LTEXT           "领取的其他药物:",IDC_STATIC,176,225,57,8
+    LTEXT           "是否领取氧氟沙星(Ofx):",IDC_STATIC,194,113,84,8
+    GROUPBOX        "药物领取情况：",IDC_STATIC,170,7,168,244
+END
+
+IDD_TABLE_1426 DIALOG DISCARDABLE  0, 0, 231, 93
+STYLE DS_MODALFRAME | WS_MINIMIZEBOX | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "转归"
+FONT 10, "宋体"
+BEGIN
+    COMBOBOX        IDC_ALTER_TYPE,96,21,72,123,CBS_DROPDOWNLIST | 
+                    WS_VSCROLL | WS_TABSTOP
+    CONTROL         "DateTimePicker1",IDC_ALTER_DATE,"SysDateTimePick32",
+                    DTS_RIGHTALIGN | DTS_SHOWNONE | WS_TABSTOP,96,42,72,15
+    PUSHBUTTON      "取消",IDCANCEL,174,72,50,14
+    LTEXT           "转归出现日期:",-1,40,46,50,8
+    LTEXT           "转归类型:",-1,55,23,35,8
+    PUSHBUTTON      "确定",IDC_CONFIRM,7,72,50,14
+END
+
+IDD_TABLE_2001 DIALOG DISCARDABLE  0, 0, 394, 373
+STYLE DS_MODALFRAME | WS_MINIMIZEBOX | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "首次就诊前支出费用记录表"
+FONT 10, "宋体"
+BEGIN
+    EDITTEXT        IDC_HOW_FAR,276,29,64,14,ES_MULTILINE | ES_AUTOHSCROLL
+    COMBOBOX        IDC_BY_WHAT_VEHICLE,276,47,64,119,CBS_DROPDOWNLIST | 
+                    WS_VSCROLL | WS_TABSTOP
+    COMBOBOX        IDC_HOW_LONG,276,64,64,71,CBS_DROPDOWNLIST | WS_VSCROLL | 
+                    WS_TABSTOP
+    EDITTEXT        IDC_FEE_FOR_VEHICLE,276,78,64,14,ES_MULTILINE | 
+                    ES_AUTOHSCROLL
+    COMBOBOX        IDC_IS_STAY_OUTSIDE,276,96,64,71,CBS_DROPDOWNLIST | 
+                    WS_VSCROLL | WS_TABSTOP
+    EDITTEXT        IDC_FEE_FOR_STAY_OUTSIDE,276,113,64,14,ES_MULTILINE | 
+                    ES_AUTOHSCROLL
+    EDITTEXT        IDC_HOW_MANY_DINNERS,276,130,64,14,ES_MULTILINE | 
+                    ES_AUTOHSCROLL
+    EDITTEXT        IDC_FEE_FOR_DINNER,276,148,64,14,ES_MULTILINE | 
+                    ES_AUTOHSCROLL
+    COMBOBOX        IDC_IS_ACCOMPANY,276,163,64,71,CBS_DROPDOWNLIST | 
+                    WS_VSCROLL | WS_TABSTOP
+    EDITTEXT        IDC_HOW_MANY_ACCOMPANY,276,181,64,14,ES_MULTILINE | 
+                    ES_AUTOHSCROLL
+    EDITTEXT        IDC_FEE_FOR_VEHICLE_ACCOMPANY,276,222,64,14,ES_MULTILINE | 
+                    ES_AUTOHSCROLL
+    COMBOBOX        IDC_IS_STAY_OUTSIDE_ACCOMPANY,276,241,64,71,
+                    CBS_DROPDOWNLIST | WS_VSCROLL | WS_TABSTOP
+    EDITTEXT        IDC_FEE_FOR_STAY_OUTSIDE_ACCOMPANY,276,260,64,14,
+                    ES_MULTILINE | ES_AUTOHSCROLL
+    EDITTEXT        IDC_HOW_MANY_DINNERS_ACCOMPANY,276,280,64,14,
+                    ES_MULTILINE | ES_AUTOHSCROLL
+    EDITTEXT        IDC_FEE_FOR_DINNER_ACCOMPANY,276,299,64,14,ES_MULTILINE | 
+                    ES_AUTOHSCROLL
+    EDITTEXT        IDC_DOCTOER_NAME,117,330,72,14,ES_MULTILINE | 
+                    ES_AUTOHSCROLL
+    CONTROL         "DateTimePicker1",IDC_FILLING_DATE,"SysDateTimePick32",
+                    DTS_RIGHTALIGN | DTS_SHOWNONE | WS_TABSTOP,259,330,72,15
+    PUSHBUTTON      "确定",IDC_CONFIRM,34,352,50,14
+    PUSHBUTTON      "取消",IDCANCEL,311,352,50,14
+    LTEXT           "您家到医院的距离大约是多少公里？",IDC_STATIC,150,32,120,
+                    8
+    LTEXT           "本次来就诊乘坐何种交通工具？",IDC_STATIC,165,48,105,8
+    LTEXT           "本次来医院就诊一趟路上花费多长时间？",IDC_STATIC,135,66,
+                    135,8
+    LTEXT           "患者本次来医院就诊花费车费、路费多少元？（仅来医院一趟，单程）",
+                    IDC_STATIC,39,81,231,8
+    LTEXT           "患者本次来医院就诊是否在外面住宿？",IDC_STATIC,143,98,
+                    127,8
+    LTEXT           "患者本次来医院就诊在外面住宿花费多少元？",IDC_STATIC,
+                    120,114,150,8
+    LTEXT           "患者本次就诊有几位家属陪伴？",IDC_STATIC,165,183,105,8
+    LTEXT           "患者家属本次陪患者来医院就诊是否在外面住宿？",
+                    IDC_STATIC,106,243,164,8
+    LTEXT           "患者家属本次陪患者来医院就诊在外面住宿花费多少元？",
+                    IDC_STATIC,83,263,187,8
+    LTEXT           "患者家属本次陪患者来医院就诊路上吃了几顿饭？",
+                    IDC_STATIC,106,282,164,8
+    LTEXT           "患者家属本次陪患者来医院就诊吃饭花费了多少元？",
+                    IDC_STATIC,98,300,172,8
+    LTEXT           "患者来就诊路上吃了几顿饭？",IDC_STATIC,172,132,98,8
+    LTEXT           "患者这次来就诊吃饭花费了多少元？",IDC_STATIC,150,151,
+                    120,8
+    LTEXT           "患者来就诊有无家属陪伴？",IDC_STATIC,180,167,90,8
+    LTEXT           "患者家属本次陪患者来医院就诊花费车费、路费多少元？",
+                    IDC_STATIC,83,226,187,8
+    LTEXT           "填表医生姓名:",IDC_STATIC,61,332,50,8
+    LTEXT           "填表日期:",IDC_STATIC,218,332,35,8
+    GROUPBOX        "患者相关信息：",IDC_STATIC,23,17,347,187
+    GROUPBOX        "患者家属相关信息：",IDC_STATIC,22,210,347,112
+END
+
+IDD_TABLE_2200 DIALOG DISCARDABLE  0, 0, 365, 277
+STYLE DS_MODALFRAME | WS_MINIMIZEBOX | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "住院阶段费用支出登记表"
+FONT 10, "宋体"
+BEGIN
+    EDITTEXT        IDC_IN_HOSPITAL_NO,52,12,88,14,ES_MULTILINE | 
+                    ES_AUTOHSCROLL
+    EDITTEXT        IDC_ACTUAL_TOTAL,94,47,52,14,ES_MULTILINE | 
+                    ES_AUTOHSCROLL
+    EDITTEXT        IDC_EXPENSE_FOR_BED,94,65,52,14,ES_MULTILINE | 
+                    ES_AUTOHSCROLL
+    EDITTEXT        IDC_EXPENSE_FOR_NURSING_CARE,94,83,52,14,ES_MULTILINE | 
+                    ES_AUTOHSCROLL
+    EDITTEXT        IDC_EXPENSE_DIAGNOS,94,101,52,14,ES_MULTILINE | 
+                    ES_AUTOHSCROLL
+    EDITTEXT        IDC_EXPENSE_OTHER_ASSAY,94,119,52,14,ES_MULTILINE | 
+                    ES_AUTOHSCROLL
+    EDITTEXT        IDC_ANTI_TUB_MEDICINE,94,137,52,14,ES_MULTILINE | 
+                    ES_AUTOHSCROLL
+    EDITTEXT        IDC_EXPENSE_FOR_ASSISTANT_MEDICINE,94,155,52,14,
+                    ES_MULTILINE | ES_AUTOHSCROLL
+    EDITTEXT        IDC_EXPENSE_SURGERY,94,173,52,14,ES_MULTILINE | 
+                    ES_AUTOHSCROLL
+    EDITTEXT        IDC_EXPENSE_OTHERS,94,191,52,14,ES_MULTILINE | 
+                    ES_AUTOHSCROLL
+    EDITTEXT        IDC_EXPENSE_FOR_TRAVAL,94,209,52,14,ES_MULTILINE | 
+                    ES_AUTOHSCROLL
+    EDITTEXT        IDC_EXPENSE_FOR_ACCOMMODATION,94,227,52,14,ES_MULTILINE | 
+                    ES_AUTOHSCROLL
+    COMBOBOX        IDC_MEDICAL_CARE_CATEGORY,281,42,52,71,CBS_DROPDOWNLIST | 
+                    WS_VSCROLL | WS_TABSTOP
+    EDITTEXT        IDC_MEDICARE_ACTUAL_REIMBURSEMENT,281,61,52,14,
+                    ES_MULTILINE | ES_AUTOHSCROLL
+    EDITTEXT        IDC_GLOBAL_FUND_REIMBURSEMENT,281,79,52,14,ES_MULTILINE | 
+                    ES_AUTOHSCROLL
+    EDITTEXT        IDC_OTHER_COMMERCIAL_REIMBURSEMENT,281,96,52,14,
+                    ES_MULTILINE | ES_AUTOHSCROLL
+    EDITTEXT        IDC_PERSONAL_PAID,281,114,52,14,ES_MULTILINE | 
+                    ES_AUTOHSCROLL
+    EDITTEXT        IDC_OTHER_SOURCE,281,133,52,14,ES_MULTILINE | 
+                    ES_AUTOHSCROLL
+    EDITTEXT        IDC_DOCTOER_NAME,246,203,65,14,ES_MULTILINE | 
+                    ES_AUTOHSCROLL
+    CONTROL         "DateTimePicker1",IDC_FILLING_DATE,"SysDateTimePick32",
+                    DTS_RIGHTALIGN | DTS_SHOWNONE | WS_TABSTOP,246,222,65,15
+    PUSHBUTTON      "确定",IDC_CONFIRM,25,256,50,14
+    PUSHBUTTON      "取消",IDCANCEL,298,256,50,14
+    LTEXT           "住院号:",IDC_STATIC,18,15,27,8
+    LTEXT           "实际支出总费用:",IDC_STATIC,33,48,57,8
+    LTEXT           "床位费:",IDC_STATIC,63,66,27,8
+    LTEXT           "护理费:",IDC_STATIC,63,84,27,8
+    LTEXT           "诊断检查费:",IDC_STATIC,48,102,42,8
+    LTEXT           "其他化验费:",IDC_STATIC,48,120,42,8
+    LTEXT           "其他费用:",IDC_STATIC,55,192,35,8
+    LTEXT           "食宿费:",IDC_STATIC,63,228,27,8
+    LTEXT           "医疗保障种类:",IDC_STATIC,227,45,50,8
+    LTEXT           "医疗保险实际报销金额:",IDC_STATIC,199,64,79,8
+    LTEXT           "全球基金报销金额:",IDC_STATIC,214,82,64,8
+    LTEXT           "抗结核药品费:",IDC_STATIC,40,138,50,8
+    LTEXT           "其他辅助药品费:",IDC_STATIC,33,156,57,8
+    LTEXT           "手术费:",IDC_STATIC,63,174,27,8
+    LTEXT           "交通费:",IDC_STATIC,63,210,27,8
+    LTEXT           "填表医生姓名:",IDC_STATIC,190,206,50,8
+    LTEXT           "填表日期:",IDC_STATIC,205,225,35,8
+    LTEXT           "其他商业医疗保险报销金额:",IDC_STATIC,183,100,94,8
+    LTEXT           "个人支付的费用:",IDC_STATIC,220,117,57,8
+    LTEXT           "其他医疗费用来源:",IDC_STATIC,214,136,64,8
+    LTEXT           "元",IDC_STATIC,148,50,8,8
+    LTEXT           "元",IDC_STATIC,148,67,8,8
+    LTEXT           "元",IDC_STATIC,148,87,8,8
+    LTEXT           "元",IDC_STATIC,148,104,8,8
+    LTEXT           "元",IDC_STATIC,148,123,8,8
+    LTEXT           "元",IDC_STATIC,148,139,8,8
+    LTEXT           "元",IDC_STATIC,148,159,8,8
+    LTEXT           "元",IDC_STATIC,148,176,8,8
+    LTEXT           "元",IDC_STATIC,148,194,8,8
+    LTEXT           "元",IDC_STATIC,148,211,8,8
+    LTEXT           "元",IDC_STATIC,148,231,8,8
+    LTEXT           "元",IDC_STATIC,334,64,8,8
+    LTEXT           "元",IDC_STATIC,334,82,8,8
+    LTEXT           "元",IDC_STATIC,334,100,8,8
+    LTEXT           "元",IDC_STATIC,334,119,8,8
+    LTEXT           "元",IDC_STATIC,334,136,8,8
+    GROUPBOX        "费用:",IDC_STATIC,18,32,148,214
+    GROUPBOX        "支出:",IDC_STATIC,177,32,181,128
+END
+
+IDD_TABLE_2300 DIALOG DISCARDABLE  0, 0, 359, 187
+STYLE DS_MODALFRAME | WS_MINIMIZEBOX | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "门诊治疗费用支出登记表"
+FONT 10, "宋体"
+BEGIN
+    EDITTEXT        IDC_EXPENSE_RANDOM_CHECK,88,24,49,14,ES_MULTILINE | 
+                    ES_AUTOHSCROLL
+    EDITTEXT        IDC_EXPENSE_FOR_INJECTION,88,42,49,14,ES_MULTILINE | 
+                    ES_AUTOHSCROLL
+    EDITTEXT        IDC_ANTI_TUB_MEDICINE,88,59,49,14,ES_MULTILINE | 
+                    ES_AUTOHSCROLL
+    EDITTEXT        IDC_EXPENSE_FOR_ASSISTANT_MEDICINE,88,77,49,14,
+                    ES_MULTILINE | ES_AUTOHSCROLL
+    EDITTEXT        IDC_EXPENSE_FOR_TRAVAL,88,96,49,14,ES_MULTILINE | 
+                    ES_AUTOHSCROLL
+    EDITTEXT        IDC_EXPENSE_FOR_ACCOMMODATION,88,114,49,14,ES_MULTILINE | 
+                    ES_AUTOHSCROLL
+    COMBOBOX        IDC_MEDICAL_CARE_CATEGORY,277,26,49,71,CBS_DROPDOWNLIST | 
+                    WS_VSCROLL | WS_TABSTOP
+    EDITTEXT        IDC_MEDICARE_ACTUAL_REIMBURSEMENT,277,42,49,14,
+                    ES_MULTILINE | ES_AUTOHSCROLL
+    EDITTEXT        IDC_GLOBAL_FUND_REIMBURSEMENT,277,60,49,14,ES_MULTILINE | 
+                    ES_AUTOHSCROLL
+    EDITTEXT        IDC_OTHER_COMMERCIAL_REIMBURSEMENT,277,78,49,14,
+                    ES_MULTILINE | ES_AUTOHSCROLL
+    EDITTEXT        IDC_PERSONAL_PAID,277,96,49,14,ES_MULTILINE | 
+                    ES_AUTOHSCROLL
+    EDITTEXT        IDC_OTHER_SOURCE,277,114,49,14,ES_MULTILINE | 
+                    ES_AUTOHSCROLL
+    EDITTEXT        IDC_DOCTOER_NAME,103,143,72,14,ES_MULTILINE | 
+                    ES_AUTOHSCROLL
+    CONTROL         "DateTimePicker1",IDC_FILLING_DATE,"SysDateTimePick32",
+                    DTS_RIGHTALIGN | DTS_SHOWNONE | WS_TABSTOP,237,142,72,15
+    PUSHBUTTON      "确定",IDC_CONFIRM,25,166,50,14
+    PUSHBUTTON      "取消",IDCANCEL,285,166,50,14
+    LTEXT           "食宿费:",IDC_STATIC,58,115,27,8
+    LTEXT           "医疗保障种类:",IDC_STATIC,224,27,50,8
+    LTEXT           "医疗保险实际报销金额:",IDC_STATIC,195,45,79,8
+    LTEXT           "全球基金报销金额:",IDC_STATIC,210,63,64,8
+    LTEXT           "随访检查费:",IDC_STATIC,43,25,42,8
+    LTEXT           "注射治疗费:",IDC_STATIC,43,43,42,8
+    LTEXT           "交通费:",IDC_STATIC,58,97,27,8
+    LTEXT           "填表医生姓名:",IDC_STATIC,46,147,50,8
+    LTEXT           "填表日期:",IDC_STATIC,195,146,35,8
+    LTEXT           "其他商业医疗保险报销金额:",IDC_STATIC,180,81,94,8
+    LTEXT           "个人支付的费用:",IDC_STATIC,217,99,57,8
+    LTEXT           "其他医疗费用来源:",IDC_STATIC,210,117,64,8
+    LTEXT           "抗结核药品费:",IDC_STATIC,35,60,50,8
+    LTEXT           "其他辅助药品费:",IDC_STATIC,28,78,57,8
+    GROUPBOX        "费用:",IDC_STATIC,14,14,149,120
+    GROUPBOX        "支出:",IDC_STATIC,175,14,170,120
+    LTEXT           "元",IDC_STATIC,141,27,8,8
+    LTEXT           "元",IDC_STATIC,141,45,8,8
+    LTEXT           "元",IDC_STATIC,141,63,8,8
+    LTEXT           "元",IDC_STATIC,141,80,8,8
+    LTEXT           "元",IDC_STATIC,141,100,8,8
+    LTEXT           "元",IDC_STATIC,141,116,8,8
+    LTEXT           "元",IDC_STATIC,329,44,8,8
+    LTEXT           "元",IDC_STATIC,329,62,8,8
+    LTEXT           "元",IDC_STATIC,329,81,8,8
+    LTEXT           "元",IDC_STATIC,329,99,8,8
+    LTEXT           "元",IDC_STATIC,329,116,8,8
+END
+
+IDD_RESEARCH_INPUT_DIAGLOG DIALOGEX 0, 0, 539, 253
+STYLE DS_MODALFRAME | WS_MINIMIZEBOX | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "健康对照信息表:"
+FONT 10, "宋体"
+BEGIN
+    COMBOBOX        IDC_CITY_SEL_COMBO,52,19,76,118,CBS_DROPDOWNLIST | 
+                    WS_VSCROLL | WS_TABSTOP
+    COMBOBOX        IDC_TOWN_SEL_COMBO,181,18,75,117,CBS_DROPDOWNLIST | 
+                    WS_VSCROLL | WS_TABSTOP
+    EDITTEXT        IDC_FILTER,287,20,97,18,ES_MULTILINE | ES_AUTOHSCROLL,
+                    WS_EX_DLGMODALFRAME
+    CONTROL         "List3",IDC_PATIENT_LIST,"SysListView32",LVS_SINGLESEL | 
+                    LVS_SHOWSELALWAYS | LVS_SORTASCENDING | LVS_AUTOARRANGE | 
+                    WS_BORDER | WS_TABSTOP,21,50,492,91,WS_EX_CLIENTEDGE | 
+                    WS_EX_STATICEDGE
+    CONTROL         "List2",IDC_TABLE_LIST,"SysListView32",LVS_SHOWSELALWAYS | 
+                    WS_BORDER | WS_TABSTOP,15,177,507,61,WS_EX_CLIENTEDGE | 
+                    WS_EX_STATICEDGE
+    PUSHBUTTON      "退出",IDCANCEL,396,18,77,18
+    LTEXT           "城乡类型：",-1,141,21,38,8
+    LTEXT           "地市：",-1,27,21,23,8
+    GROUPBOX        "请选择地市与城乡：",IDC_STATIC_CT,12,7,258,31
+    PUSHBUTTON      "新建",IDC_NEW_PATIENT,25,145,77,17
+    GROUPBOX        "健康对照列表：",IDC_STATIC_LIST,12,39,511,131
+    PUSHBUTTON      "删除",IDC_DELETE_PATIENT,146,146,77,17
+    PUSHBUTTON      "导出信息",IDC_EXPORT_DATA,262,146,77,17
+    LTEXT           "输入ID或姓名查找:",IDC_STATIC_FILTER,280,10,65,8
+    CONTROL         "Progress1",IDC_EXPORT_PROGRESS,"msctls_progress32",NOT 
+                    WS_VISIBLE | WS_BORDER,422,146,88,14
+    LTEXT           "",IDC_STATIC_EXPORT,351,149,67,8
+END
+
+IDD_RESEARCH_TABLE_3 DIALOG DISCARDABLE  0, 0, 243, 134
+STYLE DS_MODALFRAME | WS_MINIMIZEBOX | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "血标本运输"
+FONT 10, "宋体"
+BEGIN
+    COMBOBOX        IDC_IS_TO_PROVINCE,130,20,72,123,CBS_DROPDOWNLIST | 
+                    WS_VSCROLL | WS_TABSTOP
+    CONTROL         "DateTimePicker1",IDC_TO_PROVINCE_DATE,"SysDateTimePick32",
+                    DTS_RIGHTALIGN | DTS_SHOWNONE | WS_TABSTOP,130,40,72,15
+    COMBOBOX        IDC_IS_TO_NATIONAL,130,63,72,123,CBS_DROPDOWNLIST | 
+                    WS_VSCROLL | WS_TABSTOP
+    CONTROL         "DateTimePicker1",IDC_TO_NATIONAL_DATE,"SysDateTimePick32",
+                    DTS_RIGHTALIGN | DTS_SHOWNONE | WS_TABSTOP,130,83,72,15
+    PUSHBUTTON      "确定",IDC_CONFIRM,7,113,50,14
+    PUSHBUTTON      "取消",IDCANCEL,186,113,50,14
+    LTEXT           "血标本是否运送到省级:",IDC_STATIC,46,23,79,8
+    LTEXT           "血标本是否运往国家级:",IDC_STATIC,46,65,79,8
+    LTEXT           "血标本运送到省级的日期:",IDC_STATIC,38,44,87,8
+    LTEXT           "血标本运往国家级的日期:",IDC_STATIC,38,86,87,8
+END
+
+IDD_RESEARCH_TABLE_1 DIALOG DISCARDABLE  0, 0, 265, 304
+STYLE DS_MODALFRAME | WS_MINIMIZEBOX | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "研究对象纳入"
+FONT 10, "宋体"
+BEGIN
+    EDITTEXT        IDC_NAME,111,35,64,14,ES_MULTILINE | ES_AUTOHSCROLL
+    COMBOBOX        IDC_SEX_COMBO,111,52,40,71,CBS_DROPDOWNLIST | WS_VSCROLL | 
+                    WS_TABSTOP
+    EDITTEXT        IDC_AGE,111,68,40,14,ES_MULTILINE | ES_AUTOHSCROLL
+    EDITTEXT        IDC_CONTACT_INFO,111,85,75,14,ES_MULTILINE | 
+                    ES_AUTOHSCROLL
+    EDITTEXT        IDC_LOCAL_LIVING_YEAR,111,103,40,14,ES_MULTILINE | 
+                    ES_AUTOHSCROLL
+    COMBOBOX        IDC_TUB_HISTORY_YESNO,111,124,74,86,CBS_DROPDOWNLIST | 
+                    WS_VSCROLL | WS_TABSTOP
+    COMBOBOX        IDC_IS_EXCLUDED_BY_X,111,143,74,86,CBS_DROPDOWNLIST | 
+                    WS_VSCROLL | WS_TABSTOP
+    COMBOBOX        IDC_CHRONIC_DISEASE_HISTORY,111,162,74,86,
+                    CBS_DROPDOWNLIST | WS_VSCROLL | WS_TABSTOP
+    COMBOBOX        IDC_RESPIRATORY_SYSTEM_DISEASE_YESNO,111,179,74,86,
+                    CBS_DROPDOWNLIST | WS_VSCROLL | WS_TABSTOP
+    COMBOBOX        IDC_IS_AGREED,111,198,74,86,CBS_DROPDOWNLIST | 
+                    WS_VSCROLL | WS_TABSTOP
+    COMBOBOX        IDC_IS_OBSORBED,111,218,74,86,CBS_DROPDOWNLIST | 
+                    WS_VSCROLL | WS_TABSTOP
+    EDITTEXT        IDC_DOCTOR_NAME,111,236,74,14,ES_MULTILINE | 
+                    ES_AUTOHSCROLL
+    CONTROL         "DateTimePicker1",IDC_FILLING_DATE,"SysDateTimePick32",
+                    DTS_RIGHTALIGN | DTS_SHOWNONE | WS_TABSTOP,111,254,72,15
+    PUSHBUTTON      "确定",IDC_CONFIRM,27,283,50,14
+    PUSHBUTTON      "取消",IDCANCEL,181,283,50,14
+    LTEXT           "重大专项ID编号：",IDC_STATIC,47,23,61,8
+    LTEXT           "姓名：",IDC_STATIC,85,38,23,8
+    LTEXT           "性别：",IDC_STATIC,85,55,23,8
+    LTEXT           "年龄：",IDC_STATIC,85,71,23,8
+    LTEXT           "联系方式：",IDC_STATIC,70,88,38,8
+    LTEXT           "本地居住年限：",IDC_STATIC,55,106,53,8
+    LTEXT           "是否同意参加本研究：",IDC_STATIC,33,202,75,8
+    LTEXT           "填表日期：",IDC_STATIC,70,256,38,8
+    LTEXT           "有无结核病史：",IDC_STATIC,55,128,53,8
+    LTEXT           "X光检查是否排除结核：",IDC_STATIC,29,147,79,8
+    LTEXT           "有无慢性病史：",IDC_STATIC,55,166,53,8
+    LTEXT           "有无呼吸系统疾病：",IDC_STATIC,40,183,68,8
+    LTEXT           "填表医生姓名：",IDC_STATIC,55,238,53,8
+    LTEXT           "编号",IDC_ID,111,21,61,8
+    LTEXT           "是否纳入：",IDC_STATIC,70,220,38,8
+END
+
+IDD_RESEARCH_TABLE_2 DIALOG DISCARDABLE  0, 0, 271, 218
+STYLE DS_MODALFRAME | WS_MINIMIZEBOX | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "问卷调查及标本保存"
+FONT 10, "宋体"
+BEGIN
+    COMBOBOX        IDC_IS_ACKED,156,21,72,123,CBS_DROPDOWNLIST | WS_VSCROLL | 
+                    WS_TABSTOP
+    COMBOBOX        IDC_IS_QUESTIONAIR_FINISHED,156,39,72,123,
+                    CBS_DROPDOWNLIST | WS_VSCROLL | WS_TABSTOP
+    CONTROL         "DateTimePicker1",IDC_FINISHED_DATE,"SysDateTimePick32",
+                    DTS_RIGHTALIGN | DTS_SHOWNONE | WS_TABSTOP,156,58,72,15
+    COMBOBOX        IDC_IS_QUESTIONAIR_COMPLETE,156,79,72,123,
+                    CBS_DROPDOWNLIST | WS_VSCROLL | WS_TABSTOP
+    COMBOBOX        IDC_IS_BLOOD_TAKEN,156,98,72,123,CBS_DROPDOWNLIST | 
+                    WS_VSCROLL | WS_TABSTOP
+    CONTROL         "DateTimePicker1",IDC_BLOOD_TAKEN_DATE,"SysDateTimePick32",
+                    DTS_RIGHTALIGN | DTS_SHOWNONE | WS_TABSTOP,156,116,72,15
+    COMBOBOX        IDC_BLOOD_TAKEN_NO,156,137,72,123,CBS_DROPDOWNLIST | 
+                    WS_VSCROLL | WS_TABSTOP
+    EDITTEXT        IDC_BLOOD_ML,156,155,72,13,ES_MULTILINE | ES_AUTOHSCROLL
+    COMBOBOX        IDC_IS_RESERVED_20,156,174,72,123,CBS_DROPDOWNLIST | 
+                    WS_VSCROLL | WS_TABSTOP
+    PUSHBUTTON      "确定",IDC_CONFIRM,7,197,50,14
+    PUSHBUTTON      "取消",IDCANCEL,214,197,50,14
+    LTEXT           "是否完成问卷调查知情同意书:",-1,46,23,102,8
+    LTEXT           "是否完成问卷调查:",-1,84,42,64,8
+    LTEXT           "完成问卷调查日期:",-1,84,61,64,8
+    LTEXT           "调查问卷是否完整:",-1,84,80,64,8
+    LTEXT           "是否已采血:",-1,106,99,42,8
+    LTEXT           "血标本采集日期:",-1,91,118,57,8
+    LTEXT           "已采血管数:",-1,106,137,42,8
+    LTEXT           "每管采血量（ml）:",-1,83,156,65,8
+    LTEXT           "目前采血管是否在-20℃低温冰箱保存:",-1,20,175,128,8
+END
+
+IDD_DATE_CONFIRM_DIALOG DIALOG DISCARDABLE  0, 0, 194, 205
+STYLE DS_MODALFRAME | WS_MINIMIZEBOX | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "录入时间确认"
+FONT 10, "宋体"
+BEGIN
+    PUSHBUTTON      "确定",IDC_CONFIRM,7,184,50,14
+    PUSHBUTTON      "取消",IDCANCEL,137,184,50,14
+    LTEXT           "请核对录入时间:",IDC_STATIC,14,8,57,8
+    EDITTEXT        IDC_CUR_INPUT_DATE,76,7,70,14,ES_AUTOHSCROLL | 
+                    ES_READONLY
+    LTEXT           "如不正确请指定：",IDC_STATIC,14,28,60,8
+    CONTROL         "MonthCalendar1",IDC_DATE_INPUT,"SysMonthCal32",
+                    MCS_NOTODAY | WS_TABSTOP,7,46,180,126
+END
+
+IDD_STATS_DIALOG DIALOG DISCARDABLE  0, 0, 447, 169
+STYLE DS_MODALFRAME | WS_MINIMIZEBOX | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "基本统计信息"
+FONT 11, "宋体"
+BEGIN
+    CONTROL         "List1",IDC_STATS_ONE,"SysListView32",LVS_REPORT | 
+                    WS_BORDER | WS_TABSTOP,7,7,433,64
+    CONTROL         "List1",IDC_STATS_TWO,"SysListView32",LVS_REPORT | 
+                    WS_BORDER | WS_TABSTOP,7,75,433,67
+    PUSHBUTTON      "退出",IDCANCEL,390,148,50,14
+    LTEXT           "请选择要查看的月份：",IDC_STATIC,140,151,76,8
+    PUSHBUTTON      "导出",IDC_EXPORT,7,148,50,14
+    CONTROL         "DateTimePicker1",IDC_MONTH_SEL,"SysDateTimePick32",
+                    DTS_RIGHTALIGN | WS_TABSTOP,220,148,68,14
+END
+
+IDD_IMPORT_DATA DIALOG DISCARDABLE  0, 0, 419, 227
+STYLE DS_MODALFRAME | WS_MINIMIZEBOX | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "导入数据"
+FONT 10, "宋体"
+BEGIN
+    PUSHBUTTON      "取消",IDCANCEL,149,206,50,14
+    LISTBOX         IDC_IND_LIST,7,19,189,84,LBS_NOINTEGRALHEIGHT | 
+                    WS_VSCROLL | WS_TABSTOP
+    LISTBOX         IDC_CONFLICT_INFO_LIST,7,120,405,78,LBS_NOINTEGRALHEIGHT | 
+                    WS_VSCROLL | WS_HSCROLL | WS_TABSTOP
+    LTEXT           "冲突记录：",IDC_STATIC,7,7,38,8
+    LTEXT           "冲突信息：",IDC_STATIC,7,110,39,8
+    CONTROL         "Progress1",IDC_IMPORT_PROGRESS,"msctls_progress32",
+                    WS_BORDER,318,206,94,11
+    LTEXT           "导入数据中...",IDC_STATIC_TIP,220,208,94,8
+    PUSHBUTTON      "导入数据",IDC_CONFIRM,7,206,50,14,WS_DISABLED
+    LISTBOX         IDC_IND_OK_LIST,207,19,205,84,LBS_NOINTEGRALHEIGHT | 
+                    WS_VSCROLL | WS_TABSTOP
+    LTEXT           "导入成功记录：",IDC_STATIC,206,7,68,8
+END
+
+IDD_SAVE_LOAD_DATA_DLG DIALOG DISCARDABLE  0, 0, 187, 41
+STYLE DS_MODALFRAME | DS_SETFOREGROUND | WS_POPUP
+FONT 10, "宋体"
+BEGIN
+    CONTROL         "Progress1",IDC_LOAD_DATA_PROGRESS,"msctls_progress32",
+                    WS_BORDER,7,19,173,15
+    LTEXT           "数据操作中，请等待...",IDC_STATIC_TIP,7,7,80,8
+END
+
+
+#ifndef _MAC
+/////////////////////////////////////////////////////////////////////////////
+//
+// Version
+//
+
+VS_VERSION_INFO VERSIONINFO
+ FILEVERSION 1,0,0,1
+ PRODUCTVERSION 1,0,0,1
+ FILEFLAGSMASK 0x3fL
+#ifdef _DEBUG
+ FILEFLAGS 0x1L
+#else
+ FILEFLAGS 0x0L
+#endif
+ FILEOS 0x4L
+ FILETYPE 0x1L
+ FILESUBTYPE 0x0L
+BEGIN
+    BLOCK "StringFileInfo"
+    BEGIN
+        BLOCK "080404b0"
+        BEGIN
+            VALUE "Comments", "\0"
+            VALUE "CompanyName", "\0"
+            VALUE "FileDescription", "重大专项""结核病发病模式研究""研究对象信息程序\0"
+            VALUE "FileVersion", "1, 0, 0, 1\0"
+            VALUE "InternalName", "TUI\0"
+            VALUE "LegalCopyright", "版权所有 (C) 2010\0"
+            VALUE "LegalTrademarks", "\0"
+            VALUE "OriginalFilename", "TUI.EXE\0"
+            VALUE "PrivateBuild", "\0"
+            VALUE "ProductName", "TUI 应用程序\0"
+            VALUE "ProductVersion", "1, 0, 0, 1\0"
+            VALUE "SpecialBuild", "\0"
+        END
+    END
+    BLOCK "VarFileInfo"
+    BEGIN
+        VALUE "Translation", 0x804, 1200
+    END
+END
+
+#endif    // !_MAC
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// DESIGNINFO
+//
+
+#ifdef APSTUDIO_INVOKED
+GUIDELINES DESIGNINFO DISCARDABLE 
+BEGIN
+    IDD_ABOUTBOX, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 289
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 48
+    END
+
+    IDD_PATIENT_INPUT_DIALOG, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 531
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 349
+    END
+
+    IDD_TABLE_1101, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 312
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 361
+    END
+
+    IDD_TABLE_1102, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 224
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 110
+    END
+
+    IDD_TABLE_1201, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 224
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 108
+    END
+
+    IDD_TABLE_1202, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 224
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 206
+    END
+
+    IDD_TABLE_1203, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 224
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 121
+    END
+
+    IDD_TABLE_1204, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 224
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 121
+    END
+
+    IDD_TABLE_1205, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 224
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 161
+    END
+
+    IDD_TABLE_1206, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 234
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 169
+    END
+
+    IDD_TABLE_1301, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 246
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 250
+    END
+
+    IDD_TABLE_1302, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 236
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 127
+    END
+
+    IDD_TABLE_1303, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 236
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 127
+    END
+
+    IDD_TABLE_1401, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 396
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 132
+    END
+
+    IDD_TABLE_1402_1425, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 344
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 355
+    END
+
+    IDD_TABLE_1426, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 224
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 86
+    END
+
+    IDD_TABLE_2001, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 387
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 366
+    END
+
+    IDD_TABLE_2200, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 358
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 270
+    END
+
+    IDD_TABLE_2300, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 352
+        TOPMARGIN, 6
+        BOTTOMMARGIN, 180
+    END
+
+    IDD_RESEARCH_INPUT_DIAGLOG, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 532
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 246
+    END
+
+    IDD_RESEARCH_TABLE_3, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 236
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 127
+    END
+
+    IDD_RESEARCH_TABLE_1, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 258
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 297
+    END
+
+    IDD_RESEARCH_TABLE_2, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 264
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 211
+    END
+
+    IDD_DATE_CONFIRM_DIALOG, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 187
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 198
+    END
+
+    IDD_STATS_DIALOG, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 440
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 162
+    END
+
+    IDD_IMPORT_DATA, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 412
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 220
+    END
+
+    IDD_SAVE_LOAD_DATA_DLG, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 180
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 34
+    END
+END
+#endif    // APSTUDIO_INVOKED
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Dialog Info
+//
+
+IDD_TABLE_1101 DLGINIT
+BEGIN
+    IDC_SEX_COMBO, 0x403, 9, 0
+0xd0c9, 0xb4ce, 0xb7c8, 0xa8b6, "\000" 
+    IDC_SEX_COMBO, 0x403, 3, 0
+0xd0c4, "\000" 
+    IDC_SEX_COMBO, 0x403, 3, 0
+0xaec5, "\000" 
+    IDC_SCREEN_OBJECT, 0x403, 9, 0
+0xd0c9, 0xb4ce, 0xb7c8, 0xa8b6, "\000" 
+    IDC_SCREEN_OBJECT, 0x403, 9, 0
+0xdfb8, 0xa3ce, 0xcbc8, 0xbac8, "\000" 
+    IDC_SCREEN_OBJECT, 0x403, 15, 0
+0xc7b7, 0xdfb8, 0xa3ce, 0xcbc8, 0xbac8, 0xbfcd, 0xf4d1, "\000" 
+    IDC_SCREEN_OBJECT, 0x403, 5, 0
+0xbfcd, 0xf5d2, "\000" 
+    IDC_CURE_CATEGORY, 0x403, 9, 0
+0xd0c9, 0xb4ce, 0xb7c8, 0xa8b6, "\000" 
+    IDC_CURE_CATEGORY, 0x403, 5, 0
+0xf5b3, 0xced6, "\000" 
+    IDC_CURE_CATEGORY, 0x403, 5, 0
+0xb4b8, 0xced6, "\000" 
+    IDC_REGISTER_CATEGORY, 0x403, 9, 0
+0xd0c9, 0xb4ce, 0xb7c8, 0xa8b6, "\000" 
+    IDC_REGISTER_CATEGORY, 0x403, 7, 0
+0xc2d0, 0xbcbb, 0xdfd5, "\000" 
+    IDC_REGISTER_CATEGORY, 0x403, 5, 0
+0xb4b8, 0xa2b7, "\000" 
+    IDC_REGISTER_CATEGORY, 0x403, 5, 0
+0xb5b7, 0xd8bb, "\000" 
+    IDC_REGISTER_CATEGORY, 0x403, 9, 0
+0xf5b3, 0xced6, 0xa7ca, 0xdcb0, "\000" 
+    IDC_REGISTER_CATEGORY, 0x403, 9, 0
+0xb4b8, 0xced6, 0xa7ca, 0xdcb0, "\000" 
+    IDC_REGISTER_CATEGORY, 0x403, 14, 0
+0xf5b3, 0xced6, 0xd433, 0xc4c2, 0xd1a9, 0xd0f4, 0x00d4, 
+    IDC_REGISTER_CATEGORY, 0x403, 5, 0
+0xe4c6, 0xfbcb, "\000" 
+    IDC_REGISTER_CATEGORY, 0x403, 5, 0
+0xbfcd, 0xf5d2, "\000" 
+    IDC_MEDCINE_HISTORY_CATEGORY, 0x403, 9, 0
+0xd0c9, 0xb4ce, 0xb7c8, 0xa8b6, "\000" 
+    IDC_MEDCINE_HISTORY_CATEGORY, 0x403, 7, 0
+0xc2d0, 0xbcbb, 0xdfd5, "\000" 
+    IDC_MEDCINE_HISTORY_CATEGORY, 0x403, 17, 0
+0xc8bc, 0xf9cd, 0xf6bd, 0xb9ca, 0xc3d3, 0xbbd2, 0xdfcf, 0xa9d2, "\000" 
+    IDC_MEDCINE_HISTORY_CATEGORY, 0x403, 29, 0
+0xc8bc, 0xf9cd, 0xb9ca, 0xc3d3, 0xfdb9, 0xbbd2, 0xdfcf, 0xcdba, 0xfeb6, 
+0xdfcf, 0xb9bf, 0xe1bd, 0xcbba, 0xa9d2, "\000" 
+    IDC_SAMPLE_RESULT, 0x403, 9, 0
+0xd0c9, 0xb4ce, 0xb7c8, 0xa8b6, "\000" 
+    IDC_SAMPLE_RESULT, 0x403, 7, 0
+0xa1d0, 0xdad3, 0x2b31, "\000" 
+    IDC_SAMPLE_RESULT, 0x403, 3, 0
+0x2b31, "\000" 
+    IDC_SAMPLE_RESULT, 0x403, 3, 0
+0x2b32, "\000" 
+    IDC_SAMPLE_RESULT, 0x403, 3, 0
+0x2b33, "\000" 
+    IDC_SAMPLE_RESULT, 0x403, 3, 0
+0x2b34, "\000" 
+    IDC_SAMPLE_RESULT, 0x403, 5, 0
+0xf5d2, 0xd4d0, "\000" 
+    0
+END
+
+IDD_TABLE_1102 DLGINIT
+BEGIN
+    IDC_CULTIVATE_RESULT, 0x403, 9, 0
+0xd0c9, 0xb4ce, 0xb7c8, 0xa8b6, "\000" 
+    IDC_CULTIVATE_RESULT, 0x403, 7, 0
+0xa1d0, 0xdad3, 0x2b31, "\000" 
+    IDC_CULTIVATE_RESULT, 0x403, 3, 0
+0x2b31, "\000" 
+    IDC_CULTIVATE_RESULT, 0x403, 3, 0
+0x2b32, "\000" 
+    IDC_CULTIVATE_RESULT, 0x403, 3, 0
+0x2b33, "\000" 
+    IDC_CULTIVATE_RESULT, 0x403, 3, 0
+0x2b34, "\000" 
+    IDC_CULTIVATE_RESULT, 0x403, 5, 0
+0xf5d2, 0xd4d0, "\000" 
+    IDC_CULTIVATE_RESULT, 0x403, 5, 0
+0xdbce, 0xbec8, "\000" 
+    0
+END
+
+IDD_TABLE_1201 DLGINIT
+BEGIN
+    IDC_EXAMINE_RESULT, 0x403, 9, 0
+0xd0c9, 0xb4ce, 0xb7c8, 0xa8b6, "\000" 
+    IDC_EXAMINE_RESULT, 0x403, 13, 0
+0xe1bd, 0xcbba, 0xd6b7, 0xa6d6, 0xcbb8, 0xfabe, "\000" 
+    IDC_EXAMINE_RESULT, 0x403, 15, 0
+0xc7b7, 0xe1bd, 0xcbba, 0xd6b7, 0xa6d6, 0xcbb8, 0xfabe, "\000" 
+    0
+END
+
+IDD_TABLE_1202 DLGINIT
+BEGIN
+    IDC_YYJ_RESULT, 0x403, 9, 0
+0xd0c9, 0xb4ce, 0xb7c8, 0xa8b6, "\000" 
+    IDC_YYJ_RESULT, 0x403, 5, 0
+0xf4c3, 0xd0b8, "\000" 
+    IDC_YYJ_RESULT, 0x403, 5, 0
+0xcdc4, 0xa9d2, "\000" 
+    IDC_YYJ_RESULT, 0x403, 5, 0
+0xdbce, 0xbec8, "\000" 
+    IDC_LFP_RESULT, 0x403, 9, 0
+0xd0c9, 0xb4ce, 0xb7c8, 0xa8b6, "\000" 
+    IDC_LFP_RESULT, 0x403, 5, 0
+0xf4c3, 0xd0b8, "\000" 
+    IDC_LFP_RESULT, 0x403, 5, 0
+0xcdc4, 0xa9d2, "\000" 
+    IDC_LFP_RESULT, 0x403, 5, 0
+0xdbce, 0xbec8, "\000" 
+    IDC_YADC_RESULT, 0x403, 9, 0
+0xd0c9, 0xb4ce, 0xb7c8, 0xa8b6, "\000" 
+    IDC_YADC_RESULT, 0x403, 5, 0
+0xf4c3, 0xd0b8, "\000" 
+    IDC_YADC_RESULT, 0x403, 5, 0
+0xcdc4, 0xa9d2, "\000" 
+    IDC_YADC_RESULT, 0x403, 5, 0
+0xdbce, 0xbec8, "\000" 
+    IDC_LMS_RESULT, 0x403, 9, 0
+0xd0c9, 0xb4ce, 0xb7c8, 0xa8b6, "\000" 
+    IDC_LMS_RESULT, 0x403, 5, 0
+0xf4c3, 0xd0b8, "\000" 
+    IDC_LMS_RESULT, 0x403, 5, 0
+0xcdc4, 0xa9d2, "\000" 
+    IDC_LMS_RESULT, 0x403, 5, 0
+0xdbce, 0xbec8, "\000" 
+    IDC_YFSX_RESULT, 0x403, 9, 0
+0xd0c9, 0xb4ce, 0xb7c8, 0xa8b6, "\000" 
+    IDC_YFSX_RESULT, 0x403, 5, 0
+0xf4c3, 0xd0b8, "\000" 
+    IDC_YFSX_RESULT, 0x403, 5, 0
+0xcdc4, 0xa9d2, "\000" 
+    IDC_YFSX_RESULT, 0x403, 5, 0
+0xdbce, 0xbec8, "\000" 
+    IDC_KNMS_RESULT, 0x403, 9, 0
+0xd0c9, 0xb4ce, 0xb7c8, 0xa8b6, "\000" 
+    IDC_KNMS_RESULT, 0x403, 5, 0
+0xf4c3, 0xd0b8, "\000" 
+    IDC_KNMS_RESULT, 0x403, 5, 0
+0xcdc4, 0xa9d2, "\000" 
+    IDC_KNMS_RESULT, 0x403, 5, 0
+0xdbce, 0xbec8, "\000" 
+    0
+END
+
+IDD_TABLE_1203 DLGINIT
+BEGIN
+    IDC_YYJ_RESULT, 0x403, 9, 0
+0xd0c9, 0xb4ce, 0xb7c8, 0xa8b6, "\000" 
+    IDC_YYJ_RESULT, 0x403, 5, 0
+0xf4c3, 0xd0b8, "\000" 
+    IDC_YYJ_RESULT, 0x403, 5, 0
+0xcdc4, 0xa9d2, "\000" 
+    IDC_YYJ_RESULT, 0x403, 5, 0
+0xdbce, 0xbec8, "\000" 
+    IDC_YYJ_RESULT, 0x403, 9, 0
+0xdece, 0xa8b7, 0xd0c5, 0xc1b6, "\000" 
+    IDC_LFP_RESULT, 0x403, 9, 0
+0xd0c9, 0xb4ce, 0xb7c8, 0xa8b6, "\000" 
+    IDC_LFP_RESULT, 0x403, 5, 0
+0xf4c3, 0xd0b8, "\000" 
+    IDC_LFP_RESULT, 0x403, 5, 0
+0xcdc4, 0xa9d2, "\000" 
+    IDC_LFP_RESULT, 0x403, 5, 0
+0xdbce, 0xbec8, "\000" 
+    IDC_LFP_RESULT, 0x403, 9, 0
+0xdece, 0xa8b7, 0xd0c5, 0xc1b6, "\000" 
+    0
+END
+
+IDD_TABLE_1204 DLGINIT
+BEGIN
+    IDC_YYJ_RESULT, 0x403, 9, 0
+0xd0c9, 0xb4ce, 0xb7c8, 0xa8b6, "\000" 
+    IDC_YYJ_RESULT, 0x403, 5, 0
+0xf4c3, 0xd0b8, "\000" 
+    IDC_YYJ_RESULT, 0x403, 5, 0
+0xcdc4, 0xa9d2, "\000" 
+    IDC_YYJ_RESULT, 0x403, 5, 0
+0xdbce, 0xbec8, "\000" 
+    IDC_YYJ_RESULT, 0x403, 9, 0
+0xdece, 0xa8b7, 0xd0c5, 0xc1b6, "\000" 
+    IDC_LFP_RESULT, 0x403, 9, 0
+0xd0c9, 0xb4ce, 0xb7c8, 0xa8b6, "\000" 
+    IDC_LFP_RESULT, 0x403, 5, 0
+0xf4c3, 0xd0b8, "\000" 
+    IDC_LFP_RESULT, 0x403, 5, 0
+0xcdc4, 0xa9d2, "\000" 
+    IDC_LFP_RESULT, 0x403, 5, 0
+0xdbce, 0xbec8, "\000" 
+    IDC_LFP_RESULT, 0x403, 9, 0
+0xdece, 0xa8b7, 0xd0c5, 0xc1b6, "\000" 
+    0
+END
+
+IDD_TABLE_1205 DLGINIT
+BEGIN
+    IDC_YYJ_RESULT, 0x403, 9, 0
+0xd0c9, 0xb4ce, 0xb7c8, 0xa8b6, "\000" 
+    IDC_YYJ_RESULT, 0x403, 5, 0
+0xf4c3, 0xd0b8, "\000" 
+    IDC_YYJ_RESULT, 0x403, 5, 0
+0xcdc4, 0xa9d2, "\000" 
+    IDC_YYJ_RESULT, 0x403, 5, 0
+0xdbce, 0xbec8, "\000" 
+    IDC_LFP_RESULT, 0x403, 9, 0
+0xd0c9, 0xb4ce, 0xb7c8, 0xa8b6, "\000" 
+    IDC_LFP_RESULT, 0x403, 5, 0
+0xf4c3, 0xd0b8, "\000" 
+    IDC_LFP_RESULT, 0x403, 5, 0
+0xcdc4, 0xa9d2, "\000" 
+    IDC_LFP_RESULT, 0x403, 5, 0
+0xdbce, 0xbec8, "\000" 
+    IDC_YADC_RESULT, 0x403, 9, 0
+0xd0c9, 0xb4ce, 0xb7c8, 0xa8b6, "\000" 
+    IDC_YADC_RESULT, 0x403, 5, 0
+0xf4c3, 0xd0b8, "\000" 
+    IDC_YADC_RESULT, 0x403, 5, 0
+0xcdc4, 0xa9d2, "\000" 
+    IDC_YADC_RESULT, 0x403, 5, 0
+0xdbce, 0xbec8, "\000" 
+    IDC_LMS_RESULT, 0x403, 9, 0
+0xd0c9, 0xb4ce, 0xb7c8, 0xa8b6, "\000" 
+    IDC_LMS_RESULT, 0x403, 5, 0
+0xf4c3, 0xd0b8, "\000" 
+    IDC_LMS_RESULT, 0x403, 5, 0
+0xcdc4, 0xa9d2, "\000" 
+    IDC_LMS_RESULT, 0x403, 5, 0
+0xdbce, 0xbec8, "\000" 
+    0
+END
+
+IDD_TABLE_1206 DLGINIT
+BEGIN
+    IDC_DIAGNOSTIC_RESULT, 0x403, 9, 0
+0xd0c9, 0xb4ce, 0xb7c8, 0xa8b6, "\000" 
+    IDC_DIAGNOSTIC_RESULT, 0x403, 7, 0
+0xc7b7, 0xcdc4, 0xa9d2, "\000" 
+    IDC_DIAGNOSTIC_RESULT, 0x403, 7, 0
+0xa5b5, 0xcdc4, 0xa9d2, "\000" 
+    IDC_DIAGNOSTIC_RESULT, 0x403, 7, 0
+0xe0b6, 0xcdc4, 0xa9d2, "\000" 
+    IDC_DIAGNOSTIC_RESULT, 0x403, 7, 0
+0xcdc4, 0xe0b6, 0xa9d2, "\000" 
+    IDC_DIAGNOSTIC_RESULT, 0x403, 9, 0
+0xe3b9, 0xbab7, 0xcdc4, 0xa9d2, "\000" 
+    IDC_IS_SUITABLE, 0x403, 9, 0
+0xd0c9, 0xb4ce, 0xb7c8, 0xa8b6, "\000" 
+    IDC_IS_SUITABLE, 0x403, 7, 0
+0xbbb2, 0xfbb7, 0xcfba, "\000" 
+    IDC_IS_SUITABLE, 0x403, 5, 0
+0xfbb7, 0xcfba, "\000" 
+    IDC_WILLING_TO_BE_SEARCHED, 0x403, 9, 0
+0xd0c9, 0xb4ce, 0xb7c8, 0xa8b6, "\000" 
+    IDC_WILLING_TO_BE_SEARCHED, 0x403, 7, 0
+0xbbb2, 0xaccd, 0xe2d2, "\000" 
+    IDC_WILLING_TO_BE_SEARCHED, 0x403, 5, 0
+0xaccd, 0xe2d2, "\000" 
+    IDC_PATIENT_SEARCH_INFO, 0x403, 9, 0
+0xd0c9, 0xb4ce, 0xb7c8, 0xa8b6, "\000" 
+    IDC_PATIENT_SEARCH_INFO, 0x403, 21, 0
+0xf5b3, 0xced6, 0xcdc4, 0xe0b6, 0xa9d2, 0xceb7, 0xe1bd, 0xcbba, 0xbcbb, 
+0xdfd5, "\000" 
+    IDC_PATIENT_SEARCH_INFO, 0x403, 21, 0
+0xb4b8, 0xced6, 0xcdc4, 0xe0b6, 0xa9d2, 0xceb7, 0xe1bd, 0xcbba, 0xbcbb, 
+0xdfd5, "\000" 
+    IDC_PATIENT_SEARCH_INFO, 0x403, 23, 0
+0xf5b3, 0xced6, 0xc7b7, 0xcdc4, 0xe0b6, 0xa9d2, 0xceb7, 0xe1bd, 0xcbba, 
+0xbcbb, 0xdfd5, "\000" 
+    IDC_PATIENT_SEARCH_INFO, 0x403, 23, 0
+0xb4b8, 0xced6, 0xc7b7, 0xcdc4, 0xe0b6, 0xa9d2, 0xceb7, 0xe1bd, 0xcbba, 
+0xbcbb, 0xdfd5, "\000" 
+    IDC_PATIENT_SEARCH_INFO, 0x403, 7, 0
+0xb4ce, 0xebc8, 0xe9d7, "\000" 
+    0
+END
+
+IDD_TABLE_1301 DLGINIT
+BEGIN
+    IDC_IS_ACKED, 0x403, 9, 0
+0xd0c9, 0xb4ce, 0xb7c8, 0xa8b6, "\000" 
+    IDC_IS_ACKED, 0x403, 3, 0
+0xf1b7, "\000" 
+    IDC_IS_ACKED, 0x403, 3, 0
+0xc7ca, "\000" 
+    IDC_IS_QUESTIONAIR_FINISHED, 0x403, 9, 0
+0xd0c9, 0xb4ce, 0xb7c8, 0xa8b6, "\000" 
+    IDC_IS_QUESTIONAIR_FINISHED, 0x403, 3, 0
+0xf1b7, "\000" 
+    IDC_IS_QUESTIONAIR_FINISHED, 0x403, 3, 0
+0xc7ca, "\000" 
+    IDC_IS_QUESTIONAIR_COMPLETE, 0x403, 9, 0
+0xd0c9, 0xb4ce, 0xb7c8, 0xa8b6, "\000" 
+    IDC_IS_QUESTIONAIR_COMPLETE, 0x403, 3, 0
+0xf1b7, "\000" 
+    IDC_IS_QUESTIONAIR_COMPLETE, 0x403, 3, 0
+0xc7ca, "\000" 
+    IDC_IS_BLOOD_TAKEN, 0x403, 9, 0
+0xd0c9, 0xb4ce, 0xb7c8, 0xa8b6, "\000" 
+    IDC_IS_BLOOD_TAKEN, 0x403, 3, 0
+0xf1b7, "\000" 
+    IDC_IS_BLOOD_TAKEN, 0x403, 3, 0
+0xc7ca, "\000" 
+    IDC_BLOOD_TAKEN_NO, 0x403, 9, 0
+0xd0c9, 0xb4ce, 0xb7c8, 0xa8b6, "\000" 
+    IDC_BLOOD_TAKEN_NO, 0x403, 2, 0
+0x0031, 
+    IDC_BLOOD_TAKEN_NO, 0x403, 2, 0
+0x0032, 
+    IDC_IS_RESERVED_20, 0x403, 9, 0
+0xd0c9, 0xb4ce, 0xb7c8, 0xa8b6, "\000" 
+    IDC_IS_RESERVED_20, 0x403, 3, 0
+0xf1b7, "\000" 
+    IDC_IS_RESERVED_20, 0x403, 3, 0
+0xc7ca, "\000" 
+    IDC_INSTITUTION_LEVEL, 0x403, 9, 0
+0xd0c9, 0xb4ce, 0xb7c8, 0xa8b6, "\000" 
+    IDC_INSTITUTION_LEVEL, 0x403, 5, 0
+0xa1ca, 0xb6bc, "\000" 
+    IDC_INSTITUTION_LEVEL, 0x403, 7, 0
+0xd8b5, 0xd0ca, 0xb6bc, "\000" 
+    IDC_IS_RESERVED_4, 0x403, 9, 0
+0xd0c9, 0xb4ce, 0xb7c8, 0xa8b6, "\000" 
+    IDC_IS_RESERVED_4, 0x403, 3, 0
+0xf1b7, "\000" 
+    IDC_IS_RESERVED_4, 0x403, 3, 0
+0xc7ca, "\000" 
+    0
+END
+
+IDD_TABLE_1302 DLGINIT
+BEGIN
+    IDC_IS_TO_PROVINCE, 0x403, 9, 0
+0xd0c9, 0xb4ce, 0xb7c8, 0xa8b6, "\000" 
+    IDC_IS_TO_PROVINCE, 0x403, 3, 0
+0xf1b7, "\000" 
+    IDC_IS_TO_PROVINCE, 0x403, 3, 0
+0xc7ca, "\000" 
+    IDC_IS_TO_NATIONAL, 0x403, 9, 0
+0xd0c9, 0xb4ce, 0xb7c8, 0xa8b6, "\000" 
+    IDC_IS_TO_NATIONAL, 0x403, 3, 0
+0xf1b7, "\000" 
+    IDC_IS_TO_NATIONAL, 0x403, 3, 0
+0xc7ca, "\000" 
+    0
+END
+
+IDD_TABLE_1303 DLGINIT
+BEGIN
+    IDC_IS_TO_PROVINCE, 0x403, 9, 0
+0xd0c9, 0xb4ce, 0xb7c8, 0xa8b6, "\000" 
+    IDC_IS_TO_PROVINCE, 0x403, 3, 0
+0xf1b7, "\000" 
+    IDC_IS_TO_PROVINCE, 0x403, 3, 0
+0xc7ca, "\000" 
+    IDC_IS_TO_NATIONAL, 0x403, 9, 0
+0xd0c9, 0xb4ce, 0xb7c8, 0xa8b6, "\000" 
+    IDC_IS_TO_NATIONAL, 0x403, 3, 0
+0xf1b7, "\000" 
+    IDC_IS_TO_NATIONAL, 0x403, 3, 0
+0xc7ca, "\000" 
+    0
+END
+
+IDD_TABLE_1402_1425 DLGINIT
+BEGIN
+    IDC_SAMPLE_RESULT, 0x403, 9, 0
+0xd0c9, 0xb4ce, 0xb7c8, 0xa8b6, "\000" 
+    IDC_SAMPLE_RESULT, 0x403, 7, 0
+0xa1d0, 0xdad3, 0x2b31, "\000" 
+    IDC_SAMPLE_RESULT, 0x403, 3, 0
+0x2b31, "\000" 
+    IDC_SAMPLE_RESULT, 0x403, 3, 0
+0x2b32, "\000" 
+    IDC_SAMPLE_RESULT, 0x403, 3, 0
+0x2b33, "\000" 
+    IDC_SAMPLE_RESULT, 0x403, 3, 0
+0x2b34, "\000" 
+    IDC_SAMPLE_RESULT, 0x403, 5, 0
+0xf5d2, 0xd4d0, "\000" 
+    IDC_SAMPLE_RESULT, 0x403, 7, 0
+0xbbb2, 0xe8d0, 0xe9b2, "\000" 
+    IDC_SAMPLE_RESULT, 0x403, 5, 0
+0xb4ce, 0xe9b2, "\000" 
+    IDC_CULTIVATE_RESULT, 0x403, 9, 0
+0xd0c9, 0xb4ce, 0xb7c8, 0xa8b6, "\000" 
+    IDC_CULTIVATE_RESULT, 0x403, 7, 0
+0xa1d0, 0xdad3, 0x2b31, "\000" 
+    IDC_CULTIVATE_RESULT, 0x403, 3, 0
+0x2b31, "\000" 
+    IDC_CULTIVATE_RESULT, 0x403, 3, 0
+0x2b32, "\000" 
+    IDC_CULTIVATE_RESULT, 0x403, 3, 0
+0x2b33, "\000" 
+    IDC_CULTIVATE_RESULT, 0x403, 3, 0
+0x2b34, "\000" 
+    IDC_CULTIVATE_RESULT, 0x403, 5, 0
+0xf5d2, 0xd4d0, "\000" 
+    IDC_CULTIVATE_RESULT, 0x403, 5, 0
+0xdbce, 0xbec8, "\000" 
+    IDC_CULTIVATE_RESULT, 0x403, 7, 0
+0xbbb2, 0xe8d0, 0xe9b2, "\000" 
+    IDC_CULTIVATE_RESULT, 0x403, 5, 0
+0xb4ce, 0xe9b2, "\000" 
+    IDC_IS_IN_HOSPITAL, 0x403, 9, 0
+0xd0c9, 0xb4ce, 0xb7c8, 0xa8b6, "\000" 
+    IDC_IS_IN_HOSPITAL, 0x403, 3, 0
+0xf1b7, "\000" 
+    IDC_IS_IN_HOSPITAL, 0x403, 3, 0
+0xc7ca, "\000" 
+    IDC_ABNORMAL_TYPE, 0x403, 9, 0
+0xd0c9, 0xb4ce, 0xb7c8, 0xa8b6, "\000" 
+    IDC_ABNORMAL_TYPE, 0x403, 11, 0
+0xdece, 0xbbb2, 0xbcc1, 0xb4b7, 0xa6d3, "\000" 
+    IDC_ABNORMAL_TYPE, 0x403, 7, 0
+0xb8ce, 0xa6b3, 0xc0b5, "\000" 
+    IDC_ABNORMAL_TYPE, 0x403, 7, 0
+0xceb8, 0xa6b9, 0xdcc4, "\000" 
+    IDC_ABNORMAL_TYPE, 0x403, 7, 0
+0xf6c9, 0xa6b9, 0xdcc4, "\000" 
+    IDC_ABNORMAL_TYPE, 0x403, 9, 0
+0xaad1, 0xbad2, 0xb5cf, 0xb3cd, "\000" 
+    IDC_ABNORMAL_TYPE, 0x403, 9, 0
+0xf1c9, 0xadbe, 0xabbe, 0xf1c9, "\000" 
+    IDC_ABNORMAL_TYPE, 0x403, 9, 0
+0xfdb9, 0xf4c3, 0xb4b7, 0xa6d3, "\000" 
+    IDC_ABNORMAL_TYPE, 0x403, 7, 0
+0xe7b5, 0xe2bd, 0xcad6, "\000" 
+    IDC_ABNORMAL_TYPE, 0x403, 5, 0
+0xe4c6, 0xfbcb, "\000" 
+    IDC_ABNORMAL_LEVEL, 0x403, 9, 0
+0xd0c9, 0xb4ce, 0xb7c8, 0xa8b6, "\000" 
+    IDC_ABNORMAL_LEVEL, 0x403, 5, 0
+0xe1c7, 0xc8b6, "\000" 
+    IDC_ABNORMAL_LEVEL, 0x403, 5, 0
+0xd0d6, 0xc8b6, "\000" 
+    IDC_ABNORMAL_LEVEL, 0x403, 5, 0
+0xd8d6, 0xc8b6, "\000" 
+    IDC_IMPACT, 0x403, 9, 0
+0xd0c9, 0xb4ce, 0xb7c8, 0xa8b6, "\000" 
+    IDC_IMPACT, 0x403, 11, 0
+0xacce, 0xd6b3, 0xadd4, 0xced6, 0xc6c1, "\000" 
+    IDC_IMPACT, 0x403, 9, 0
+0xf7b5, 0xfbd5, 0xc1bc, 0xbfc1, "\000" 
+    IDC_IMPACT, 0x403, 9, 0
+0xfcb8, 0xbbbb, 0xa9d2, 0xefce, "\000" 
+    IDC_IMPACT, 0x403, 9, 0
+0xddd4, 0xa3cd, 0xced6, 0xc6c1, "\000" 
+    IDC_IMPACT, 0x403, 9, 0
+0xd0d6, 0xb9d6, 0xced6, 0xc6c1, "\000" 
+    IDC_IS_PROJECT_CHANGED, 0x403, 9, 0
+0xd0c9, 0xb4ce, 0xb7c8, 0xa8b6, "\000" 
+    IDC_IS_PROJECT_CHANGED, 0x403, 3, 0
+0xf1b7, "\000" 
+    IDC_IS_PROJECT_CHANGED, 0x403, 3, 0
+0xc7ca, "\000" 
+    IDC_Z_YESNO, 0x403, 9, 0
+0xd0c9, 0xb4ce, 0xb7c8, 0xa8b6, "\000" 
+    IDC_Z_YESNO, 0x403, 3, 0
+0xf1b7, "\000" 
+    IDC_Z_YESNO, 0x403, 3, 0
+0xc7ca, "\000" 
+    IDC_E_YESNO, 0x403, 9, 0
+0xd0c9, 0xb4ce, 0xb7c8, 0xa8b6, "\000" 
+    IDC_E_YESNO, 0x403, 3, 0
+0xf1b7, "\000" 
+    IDC_E_YESNO, 0x403, 3, 0
+0xc7ca, "\000" 
+    IDC_KM_YESNO, 0x403, 9, 0
+0xd0c9, 0xb4ce, 0xb7c8, 0xa8b6, "\000" 
+    IDC_KM_YESNO, 0x403, 3, 0
+0xf1b7, "\000" 
+    IDC_KM_YESNO, 0x403, 3, 0
+0xc7ca, "\000" 
+    IDC_AM_YESNO, 0x403, 9, 0
+0xd0c9, 0xb4ce, 0xb7c8, 0xa8b6, "\000" 
+    IDC_AM_YESNO, 0x403, 3, 0
+0xf1b7, "\000" 
+    IDC_AM_YESNO, 0x403, 3, 0
+0xc7ca, "\000" 
+    IDC_CM_YESNO, 0x403, 9, 0
+0xd0c9, 0xb4ce, 0xb7c8, 0xa8b6, "\000" 
+    IDC_CM_YESNO, 0x403, 3, 0
+0xf1b7, "\000" 
+    IDC_CM_YESNO, 0x403, 3, 0
+0xc7ca, "\000" 
+    IDC_OFX_YESN, 0x403, 9, 0
+0xd0c9, 0xb4ce, 0xb7c8, 0xa8b6, "\000" 
+    IDC_OFX_YESN, 0x403, 3, 0
+0xf1b7, "\000" 
+    IDC_OFX_YESN, 0x403, 3, 0
+0xc7ca, "\000" 
+    IDC_LFX_YESNO, 0x403, 9, 0
+0xd0c9, 0xb4ce, 0xb7c8, 0xa8b6, "\000" 
+    IDC_LFX_YESNO, 0x403, 3, 0
+0xf1b7, "\000" 
+    IDC_LFX_YESNO, 0x403, 3, 0
+0xc7ca, "\000" 
+    IDC_MFX_YESNO, 0x403, 9, 0
+0xd0c9, 0xb4ce, 0xb7c8, 0xa8b6, "\000" 
+    IDC_MFX_YESNO, 0x403, 3, 0
+0xf1b7, "\000" 
+    IDC_MFX_YESNO, 0x403, 3, 0
+0xc7ca, "\000" 
+    IDC_PTO_YESNO, 0x403, 9, 0
+0xd0c9, 0xb4ce, 0xb7c8, 0xa8b6, "\000" 
+    IDC_PTO_YESNO, 0x403, 3, 0
+0xf1b7, "\000" 
+    IDC_PTO_YESNO, 0x403, 3, 0
+0xc7ca, "\000" 
+    IDC_CS_YESNO, 0x403, 9, 0
+0xd0c9, 0xb4ce, 0xb7c8, 0xa8b6, "\000" 
+    IDC_CS_YESNO, 0x403, 3, 0
+0xf1b7, "\000" 
+    IDC_CS_YESNO, 0x403, 3, 0
+0xc7ca, "\000" 
+    IDC_PAS_YESNO, 0x403, 9, 0
+0xd0c9, 0xb4ce, 0xb7c8, 0xa8b6, "\000" 
+    IDC_PAS_YESNO, 0x403, 3, 0
+0xf1b7, "\000" 
+    IDC_PAS_YESNO, 0x403, 3, 0
+0xc7ca, "\000" 
+    0
+END
+
+IDD_TABLE_1426 DLGINIT
+BEGIN
+    IDC_ALTER_TYPE, 0x403, 9, 0
+0xd0c9, 0xb4ce, 0xb7c8, 0xa8b6, "\000" 
+    IDC_ALTER_TYPE, 0x403, 5, 0
+0xced6, 0xfad3, "\000" 
+    IDC_ALTER_TYPE, 0x403, 9, 0
+0xeacd, 0xc9b3, 0xced6, 0xc6c1, "\000" 
+    IDC_ALTER_TYPE, 0x403, 5, 0
+0xc0cb, 0xf6cd, "\000" 
+    IDC_ALTER_TYPE, 0x403, 5, 0
+0xa7ca, 0xdcb0, "\000" 
+    IDC_ALTER_TYPE, 0x403, 5, 0
+0xaab6, 0xa7ca, "\000" 
+    IDC_ALTER_TYPE, 0x403, 13, 0
+0xbbb2, 0xbcc1, 0xb4b7, 0xa6d3, 0xa3cd, 0xa9d2, "\000" 
+    IDC_ALTER_TYPE, 0x403, 5, 0
+0xe4c6, 0xfbcb, "\000" 
+    0
+END
+
+IDD_TABLE_2001 DLGINIT
+BEGIN
+    IDC_BY_WHAT_VEHICLE, 0x403, 9, 0
+0xd0c9, 0xb4ce, 0xb7c8, 0xa8b6, "\000" 
+    IDC_BY_WHAT_VEHICLE, 0x403, 5, 0
+0xf0bb, 0xb5b3, "\000" 
+    IDC_BY_WHAT_VEHICLE, 0x403, 9, 0
+0xabb9, 0xb2b9, 0xfbc6, 0xb5b3, "\000" 
+    IDC_BY_WHAT_VEHICLE, 0x403, 7, 0
+0xbdcb, 0xd2bc, 0xb5b3, "\000" 
+    IDC_BY_WHAT_VEHICLE, 0x403, 7, 0
+0xd4d7, 0xd0d0, 0xb5b3, "\000" 
+    IDC_BY_WHAT_VEHICLE, 0x403, 5, 0
+0xbdb2, 0xd0d0, "\000" 
+    IDC_BY_WHAT_VEHICLE, 0x403, 5, 0
+0xe4c6, 0xfbcb, "\000" 
+    IDC_HOW_LONG, 0x403, 9, 0
+0xd0c9, 0xb4ce, 0xb7c8, 0xa8b6, "\000" 
+    IDC_HOW_LONG, 0x403, 8, 0
+0xd032, 0xcaa1, 0xc4b1, 0x00da, 
+    IDC_HOW_LONG, 0x403, 5, 0
+0xebb0, 0xeccc, "\000" 
+    IDC_HOW_LONG, 0x403, 4, 0
+0xcc31, 0x00ec, 
+    IDC_HOW_LONG, 0x403, 8, 0
+0xcc31, 0xd2ec, 0xc9d4, 0x00cf, 
+    IDC_IS_STAY_OUTSIDE, 0x403, 9, 0
+0xd0c9, 0xb4ce, 0xb7c8, 0xa8b6, "\000" 
+    IDC_IS_STAY_OUTSIDE, 0x403, 3, 0
+0xf1b7, "\000" 
+    IDC_IS_STAY_OUTSIDE, 0x403, 3, 0
+0xc7ca, "\000" 
+    IDC_IS_ACCOMPANY, 0x403, 9, 0
+0xd0c9, 0xb4ce, 0xb7c8, 0xa8b6, "\000" 
+    IDC_IS_ACCOMPANY, 0x403, 3, 0
+0xdece, "\000" 
+    IDC_IS_ACCOMPANY, 0x403, 3, 0
+0xd0d3, "\000" 
+    IDC_IS_STAY_OUTSIDE_ACCOMPANY, 0x403, 9, 0
+0xd0c9, 0xb4ce, 0xb7c8, 0xa8b6, "\000" 
+    IDC_IS_STAY_OUTSIDE_ACCOMPANY, 0x403, 3, 0
+0xf1b7, "\000" 
+    IDC_IS_STAY_OUTSIDE_ACCOMPANY, 0x403, 3, 0
+0xc7ca, "\000" 
+    0
+END
+
+IDD_TABLE_2200 DLGINIT
+BEGIN
+    IDC_MEDICAL_CARE_CATEGORY, 0x403, 9, 0
+0xd0c9, 0xb4ce, 0xb7c8, 0xa8b6, "\000" 
+    IDC_MEDICAL_CARE_CATEGORY, 0x403, 3, 0
+0xdece, "\000" 
+    IDC_MEDICAL_CARE_CATEGORY, 0x403, 7, 0
+0xc2d0, 0xa9c5, 0xcfba, "\000" 
+    IDC_MEDICAL_CARE_CATEGORY, 0x403, 9, 0
+0xc7b3, 0xf2d5, 0xb0d6, 0xa4b9, "\000" 
+    IDC_MEDICAL_CARE_CATEGORY, 0x403, 9, 0
+0xc7b3, 0xf2d5, 0xd3be, 0xf1c3, "\000" 
+    0
+END
+
+IDD_TABLE_2300 DLGINIT
+BEGIN
+    IDC_MEDICAL_CARE_CATEGORY, 0x403, 9, 0
+0xd0c9, 0xb4ce, 0xb7c8, 0xa8b6, "\000" 
+    IDC_MEDICAL_CARE_CATEGORY, 0x403, 3, 0
+0xdece, "\000" 
+    IDC_MEDICAL_CARE_CATEGORY, 0x403, 7, 0
+0xc2d0, 0xa9c5, 0xcfba, "\000" 
+    IDC_MEDICAL_CARE_CATEGORY, 0x403, 9, 0
+0xc7b3, 0xf2d5, 0xb0d6, 0xa4b9, "\000" 
+    IDC_MEDICAL_CARE_CATEGORY, 0x403, 9, 0
+0xc7b3, 0xf2d5, 0xd3be, 0xf1c3, "\000" 
+    0
+END
+
+IDD_RESEARCH_INPUT_DIAGLOG DLGINIT
+BEGIN
+    IDC_TOWN_SEL_COMBO, 0x403, 5, 0
+0xc7b3, 0xd0ca, "\000" 
+    IDC_TOWN_SEL_COMBO, 0x403, 5, 0
+0xa9c5, 0xe5b4, "\000" 
+    0
+END
+
+IDD_RESEARCH_TABLE_3 DLGINIT
+BEGIN
+    IDC_IS_TO_PROVINCE, 0x403, 1, 0
+"\000" 
+    IDC_IS_TO_PROVINCE, 0x403, 3, 0
+0xf1b7, "\000" 
+    IDC_IS_TO_PROVINCE, 0x403, 3, 0
+0xc7ca, "\000" 
+    IDC_IS_TO_NATIONAL, 0x403, 1, 0
+"\000" 
+    IDC_IS_TO_NATIONAL, 0x403, 3, 0
+0xf1b7, "\000" 
+    IDC_IS_TO_NATIONAL, 0x403, 3, 0
+0xc7ca, "\000" 
+    0
+END
+
+IDD_RESEARCH_TABLE_1 DLGINIT
+BEGIN
+    IDC_SEX_COMBO, 0x403, 1, 0
+"\000" 
+    IDC_SEX_COMBO, 0x403, 3, 0
+0xd0c4, "\000" 
+    IDC_SEX_COMBO, 0x403, 3, 0
+0xaec5, "\000" 
+    IDC_TUB_HISTORY_YESNO, 0x403, 1, 0
+"\000" 
+    IDC_TUB_HISTORY_YESNO, 0x403, 3, 0
+0xdece, "\000" 
+    IDC_TUB_HISTORY_YESNO, 0x403, 3, 0
+0xd0d3, "\000" 
+    IDC_IS_EXCLUDED_BY_X, 0x403, 1, 0
+"\000" 
+    IDC_IS_EXCLUDED_BY_X, 0x403, 3, 0
+0xf1b7, "\000" 
+    IDC_IS_EXCLUDED_BY_X, 0x403, 3, 0
+0xc7ca, "\000" 
+    IDC_CHRONIC_DISEASE_HISTORY, 0x403, 1, 0
+"\000" 
+    IDC_CHRONIC_DISEASE_HISTORY, 0x403, 3, 0
+0xdece, "\000" 
+    IDC_CHRONIC_DISEASE_HISTORY, 0x403, 3, 0
+0xd0d3, "\000" 
+    IDC_RESPIRATORY_SYSTEM_DISEASE_YESNO, 0x403, 1, 0
+"\000" 
+    IDC_RESPIRATORY_SYSTEM_DISEASE_YESNO, 0x403, 3, 0
+0xdece, "\000" 
+    IDC_RESPIRATORY_SYSTEM_DISEASE_YESNO, 0x403, 3, 0
+0xd0d3, "\000" 
+    IDC_IS_AGREED, 0x403, 1, 0
+"\000" 
+    IDC_IS_AGREED, 0x403, 3, 0
+0xf1b7, "\000" 
+    IDC_IS_AGREED, 0x403, 3, 0
+0xc7ca, "\000" 
+    IDC_IS_OBSORBED, 0x403, 1, 0
+"\000" 
+    IDC_IS_OBSORBED, 0x403, 3, 0
+0xf1b7, "\000" 
+    IDC_IS_OBSORBED, 0x403, 3, 0
+0xc7ca, "\000" 
+    0
+END
+
+IDD_RESEARCH_TABLE_2 DLGINIT
+BEGIN
+    IDC_IS_ACKED, 0x403, 1, 0
+"\000" 
+    IDC_IS_ACKED, 0x403, 3, 0
+0xf1b7, "\000" 
+    IDC_IS_ACKED, 0x403, 3, 0
+0xc7ca, "\000" 
+    IDC_IS_QUESTIONAIR_FINISHED, 0x403, 1, 0
+"\000" 
+    IDC_IS_QUESTIONAIR_FINISHED, 0x403, 3, 0
+0xf1b7, "\000" 
+    IDC_IS_QUESTIONAIR_FINISHED, 0x403, 3, 0
+0xc7ca, "\000" 
+    IDC_IS_QUESTIONAIR_COMPLETE, 0x403, 1, 0
+"\000" 
+    IDC_IS_QUESTIONAIR_COMPLETE, 0x403, 3, 0
+0xf1b7, "\000" 
+    IDC_IS_QUESTIONAIR_COMPLETE, 0x403, 3, 0
+0xc7ca, "\000" 
+    IDC_IS_BLOOD_TAKEN, 0x403, 1, 0
+"\000" 
+    IDC_IS_BLOOD_TAKEN, 0x403, 3, 0
+0xf1b7, "\000" 
+    IDC_IS_BLOOD_TAKEN, 0x403, 3, 0
+0xc7ca, "\000" 
+    IDC_BLOOD_TAKEN_NO, 0x403, 1, 0
+"\000" 
+    IDC_BLOOD_TAKEN_NO, 0x403, 2, 0
+0x0031, 
+    IDC_BLOOD_TAKEN_NO, 0x403, 2, 0
+0x0032, 
+    IDC_IS_RESERVED_20, 0x403, 1, 0
+"\000" 
+    IDC_IS_RESERVED_20, 0x403, 3, 0
+0xf1b7, "\000" 
+    IDC_IS_RESERVED_20, 0x403, 3, 0
+0xc7ca, "\000" 
+    0
+END
+
+IDD_TABLE_1401 DLGINIT
+BEGIN
+    IDC_PROJECT_SEL, 0x403, 9, 0
+0xd0c9, 0xb4ce, 0xb7c8, 0xa8b6, "\000" 
+    IDC_PROJECT_SEL, 0x403, 36, 0
+0x2036, 0x205a, 0x6d41, 0x4c20, 0x7866, 0x5020, 0x5341, 0x5020, 0x6f74, 
+0x312f, 0x2038, 0x205a, 0x664c, 0x2078, 0x4150, 0x2053, 0x7450, 0x006f, 
+
+    IDC_PROJECT_SEL, 0x403, 34, 0
+0x2036, 0x205a, 0x6d41, 0x4c20, 0x7866, 0x5020, 0x5341, 0x5020, 0x6f74, 
+0x312f, 0x2038, 0x205a, 0x664c, 0x2078, 0x2045, 0x7450, 0x006f, 
+    IDC_PROJECT_SEL, 0x403, 34, 0
+0x2036, 0x205a, 0x6d41, 0x4c20, 0x7866, 0x4520, 0x5020, 0x6f74, 0x312f, 
+0x2038, 0x205a, 0x664c, 0x2078, 0x4150, 0x2053, 0x7450, 0x006f, 
+    IDC_PROJECT_SEL, 0x403, 32, 0
+0x2036, 0x205a, 0x6d41, 0x4c20, 0x7866, 0x4520, 0x5020, 0x6f74, 0x312f, 
+0x2038, 0x205a, 0x664c, 0x2078, 0x2045, 0x7450, 0x006f, 
+    IDC_PROJECT_SEL, 0x403, 36, 0
+0x2036, 0x205a, 0x6d43, 0x4c20, 0x7866, 0x5020, 0x5341, 0x5020, 0x6f74, 
+0x312f, 0x2038, 0x205a, 0x664c, 0x2078, 0x4150, 0x2053, 0x7450, 0x006f, 
+
+    IDC_PROJECT_SEL, 0x403, 34, 0
+0x2036, 0x205a, 0x6d43, 0x4c20, 0x7866, 0x5020, 0x5341, 0x5020, 0x6f74, 
+0x312f, 0x2038, 0x205a, 0x664c, 0x2078, 0x2045, 0x7450, 0x006f, 
+    IDC_PROJECT_SEL, 0x403, 34, 0
+0x2036, 0x205a, 0x6d43, 0x4c20, 0x7866, 0x4520, 0x5020, 0x6f74, 0x312f, 
+0x2038, 0x205a, 0x664c, 0x2078, 0x4150, 0x2053, 0x7450, 0x006f, 
+    IDC_PROJECT_SEL, 0x403, 32, 0
+0x2036, 0x205a, 0x6d43, 0x4c20, 0x7866, 0x4520, 0x5020, 0x6f74, 0x312f, 
+0x2038, 0x205a, 0x664c, 0x2078, 0x2045, 0x7450, 0x006f, 
+    IDC_PROJECT_SEL, 0x403, 36, 0
+0x2036, 0x205a, 0x6d4b, 0x4c20, 0x7866, 0x5020, 0x5341, 0x5020, 0x6f74, 
+0x312f, 0x2038, 0x205a, 0x664c, 0x2078, 0x4150, 0x2053, 0x7450, 0x006f, 
+
+    IDC_PROJECT_SEL, 0x403, 34, 0
+0x2036, 0x205a, 0x6d4b, 0x4c20, 0x7866, 0x5020, 0x5341, 0x5020, 0x6f74, 
+0x312f, 0x2038, 0x205a, 0x664c, 0x2078, 0x2045, 0x7450, 0x006f, 
+    IDC_PROJECT_SEL, 0x403, 34, 0
+0x2036, 0x205a, 0x6d4b, 0x4c20, 0x7866, 0x4520, 0x5020, 0x6f74, 0x312f, 
+0x2038, 0x205a, 0x664c, 0x2078, 0x4150, 0x2053, 0x7450, 0x006f, 
+    IDC_PROJECT_SEL, 0x403, 32, 0
+0x2036, 0x205a, 0x6d4b, 0x4c20, 0x7866, 0x4520, 0x5020, 0x6f74, 0x312f, 
+0x2038, 0x205a, 0x664c, 0x2078, 0x2045, 0x7450, 0x006f, 
+    IDC_PROJECT_SEL, 0x403, 5, 0
+0xe4c6, 0xfbcb, "\000" 
+    0
+END
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Bitmap
+//
+
+IDB_BK                  BITMAP  DISCARDABLE     "res\\bk.bmp"
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// String Table
+//
+
+STRINGTABLE DISCARDABLE 
+BEGIN
+    IDS_ABOUTBOX            "关于 TUI(&A)..."
+END
+
+#endif    // Chinese (P.R.C.) resources
+/////////////////////////////////////////////////////////////////////////////
+
+
+
+#ifndef APSTUDIO_INVOKED
+/////////////////////////////////////////////////////////////////////////////
+//
+// Generated from the TEXTINCLUDE 3 resource.
+//
+#define _AFX_NO_SPLITTER_RESOURCES
+#define _AFX_NO_OLE_RESOURCES
+#define _AFX_NO_TRACKER_RESOURCES
+#define _AFX_NO_PROPERTY_RESOURCES
+
+#if !defined(AFX_RESOURCE_DLL) || defined(AFX_TARG_CHS)
+#ifdef _WIN32
+LANGUAGE 4, 2
+#pragma code_page(936)
+#endif //_WIN32
+#include "res\TUI.rc2"  // non-Microsoft Visual C++ edited resources
+#include "l.chs\afxres.rc"          // Standard components
+#endif
+
+/////////////////////////////////////////////////////////////////////////////
+#endif    // not APSTUDIO_INVOKED
+
